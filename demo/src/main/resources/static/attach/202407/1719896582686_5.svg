@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_2158" data-name="사각형 2158" width="72" height="72" transform="translate(361 395)" fill="none" opacity="0.44"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_64" data-name="마스크 그룹 64" transform="translate(-361 -395)" clip-path="url(#clip-path)">
+    <g id="_01" data-name="01" transform="translate(-211 -2)">
+      <g id="_01_icon" data-name="01_icon" transform="translate(-1070 -17.999)">
+        <path id="타원_53" data-name="타원 53" d="M20,1a19.005,19.005,0,0,0-7.4,36.507A19.005,19.005,0,0,0,27.4,2.493,18.88,18.88,0,0,0,20,1m0-1A20,20,0,1,1,0,20,20,20,0,0,1,20,0Z" transform="translate(1658 426)" fill="#707070"/>
+        <path id="합치기_16" data-name="합치기 16" d="M8789,4289a26.98,26.98,0,0,0-27,27c0,.321.006.646.017.965l.037,1.035H8762v33.179l10.921-13.468.762.526A27.007,27.007,0,1,0,8789,4289m0-1a28,28,0,1,1-15.887,51.061L8761,4354v-37h.018q-.018-.5-.018-1A28,28,0,0,1,8789,4288Z" transform="translate(-7110.999 -3870)" fill="#707070"/>
+        <circle id="타원_54" data-name="타원 54" cx="11" cy="11" r="11" transform="translate(1667 435)" fill="#41c956"/>
+      </g>
+    </g>
+  </g>
+</svg>

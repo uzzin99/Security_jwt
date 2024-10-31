@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="Icon2" transform="translate(-1468 -320)">
+    <circle id="타원_143" data-name="타원 143" cx="50" cy="50" r="50" transform="translate(1468 320)" fill="#fff"/>
+    <g id="그룹_8126" data-name="그룹 8126" transform="translate(373 11)">
+      <g id="그룹_8124" data-name="그룹 8124" transform="translate(-6040 357)">
+        <g id="사각형_2172" data-name="사각형 2172">
+          <rect id="사각형_2172-2" data-name="사각형 2172" width="2" height="20" rx="1" transform="translate(7199)" fill="#132229"/>
+          <path id="사각형_2172_-_윤곽선" data-name="사각형 2172 - 윤곽선" d="M1,0A1,1,0,0,1,2,1V19a1,1,0,0,1-2,0V1A1,1,0,0,1,1,0Z" transform="translate(7199)" fill="#132229"/>
+        </g>
+        <g id="사각형_2166" data-name="사각형 2166">
+          <rect id="사각형_2166-2" data-name="사각형 2166" width="2" height="20" rx="1" transform="translate(7189)" fill="#132229"/>
+          <path id="사각형_2166_-_윤곽선" data-name="사각형 2166 - 윤곽선" d="M1,0A1,1,0,0,1,2,1V19a1,1,0,0,1-2,0V1A1,1,0,0,1,1,0Z" transform="translate(7189)" fill="#132229"/>
+        </g>
+        <g id="사각형_2165" data-name="사각형 2165">
+          <rect id="사각형_2165-2" data-name="사각형 2165" width="2" height="20" rx="1" transform="translate(7179)" fill="#132229"/>
+          <path id="사각형_2165_-_윤곽선" data-name="사각형 2165 - 윤곽선" d="M1,0A1,1,0,0,1,2,1V19a1,1,0,0,1-2,0V1A1,1,0,0,1,1,0Z" transform="translate(7179)" fill="#132229"/>
+        </g>
+        <g id="사각형_2164" data-name="사각형 2164">
+          <rect id="사각형_2164-2" data-name="사각형 2164" width="2" height="20" rx="1" transform="translate(7169)" fill="#132229"/>
+          <path id="사각형_2164_-_윤곽선" data-name="사각형 2164 - 윤곽선" d="M1,0A1,1,0,0,1,2,1V19a1,1,0,0,1-2,0V1A1,1,0,0,1,1,0Z" transform="translate(7169)" fill="#132229"/>
+        </g>
+      </g>
+      <rect id="사각형_2171" data-name="사각형 2171" width="46" height="2" rx="1" transform="translate(1122 375)" fill="#132229"/>
+      <path id="사각형_2171_-_윤곽선" data-name="사각형 2171 - 윤곽선" d="M1,0H45a1,1,0,0,1,0,2H1A1,1,0,0,1,1,0Z" transform="translate(1122 375)" fill="#132229"/>
+      <path id="빼기_6" data-name="빼기 6" d="M6840,3345h-52l26-19,26,19Zm-26-11a3,3,0,1,0,3,3A3,3,0,0,0,6814,3334Z" transform="translate(-5669 -2992)" fill="#94c948"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+:root{
+    --primary: #3FC15F;
+}
+
+.typeDept{scroll-behavior:smooth;}
+
+.dVisualArea{width:100%;height:100vh;position:sticky;top:0;}
+.dVisualArea .dVisual{width:100%;height:100%;position:relative;}
+.dVisualArea .dVisual:before,.dVisualArea .dVisual:after{content:"";position:absolute;width:100%;height:100%;left:0;top:0;z-index:1;}
+.dVisualArea .dVisual:before{background:rgba(0,0,0,0.3);}
+.dVisualArea .dVisual:after{background:linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.07) 98%);}
+.dVisualArea .dv_img{width:100%;height:100%;background-repeat: no-repeat;background-position:center top;background-size:cover;transform:scale(1.1);transition:transform 3s;}
+.dVisualArea .dv_txt{width:1520px;margin:0 auto;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;text-align:center;}
+.dVisualArea .dv_txt h2{font-size:150px;color:#fff;font-weight:bold;line-height:176px;margin-bottom:25px;}
+.dVisualArea .dv_txt .cagBtnArea{display:flex;flex-wrap:wrap;justify-content:center;}
+.dVisualArea .dv_txt .cagBtnArea .item{width:auto;}
+.dVisualArea .dv_txt .cagBtnArea .item:not(:last-child){margin-right:10px;}
+.dVisualArea .dv_txt .cagBtnArea .item a{display:inline-block;padding:15px 24px 14px;font-size:16px;font-weight:600;line-height:19px;transition:all 0.2s;background:#fff;color:#000;border-radius:30px;}
+.dVisualArea .dv_txt .cagBtnArea .item a:hover{background:var(--primary);color:#fff;}
+.dVisualArea.init .dv_img{transform:scale(1);}
+
+.typeDept article{position:sticky;top:0;z-index:5;margin-top:-48px;background:#fff;border-radius:40px 40px 0 0;}
+.departCont{overflow-y:auto;padding:0 40px 0 39px;margin-bottom:75px;}
+.departCont > div.depart_bx{padding:65px 0;display:flex;flex-wrap:wrap;align-content:center;align-items:center;}
+.departCont > div.depart_bx:first-child{padding:51px 0 65px;}
+.departCont > div.depart_bx > div{width:calc(50% - 7.5px);}
+.departCont > div.depart_bx:nth-child(odd) > div:nth-child(1){order:1;margin-right:15px;}
+.departCont > div.depart_bx:nth-child(odd) > div:nth-child(2){order:2;padding:12px 0 0 82px;}
+.departCont > div.depart_bx:nth-child(even) > div:nth-child(1){order:2;margin-left:15px;}
+.departCont > div.depart_bx:nth-child(even) > div:nth-child(2){order:1;padding:12px 82px 0 0;}
+.departCont > div.depart_bx .img_bx{height:467px;background-repeat:no-repeat;background-size:cover;background-position:center center;border-radius:30px;}
+.departCont > div.depart_bx .txt_bx{margin-top:-1px;}
+.departCont > div.depart_bx .txt_bx h3{font-size:64px;font-weight:bold;line-height:75px;color:#183B3F;margin-bottom:24px;}
+.departCont > div.depart_bx .txt_bx p{font-size:20px;font-weight:400;line-height:24px;color:#000;word-break:keep-all;}
+.departCont > div.depart_bx .txt_bx ul{display:flex;flex-wrap:wrap;margin-top:56px;}
+.departCont > div.depart_bx .txt_bx ul li{margin:0 10px 12px 0;}
+.departCont > div.depart_bx .txt_bx .btnArrow{padding:17px 53px 16px 31px;line-height:1;position:relative;}
+.departCont > div.depart_bx .txt_bx .btnArrow:after{content:"";position:absolute;width:8px;height:14px;top:52%;right:30px;transform:translateY(-50%);transition:all 0.2s;background:url(../img/type2/ico_btnArrow.svg) no-repeat center center;}
+.departCont > div.depart_bx .txt_bx .btnArrow span{font-size:16px;font-weight:600;line-height:17px;color:#183B3F;}
+.departCont > div.depart_bx .txt_bx .btnArrow:hover:after{background-image:url(../img/type2/ico_btnArrow_on.svg);}
+.departCont > div.depart_bx .txt_bx .btnArrow:hover span{color:#fff;}
+
+.departCont #departmentA .txt_bx ul,
+.departCont #departmentD .txt_bx ul{width:80%;}
+.departCont #departmentG .txt_bx{margin-top:0;padding-top:2px;}
+
+/* responsive */
+@media only screen and  (max-width:1500px){
+    .dVisualArea .dv_txt{width:1200px;}
+}
+
+@media only screen and  (max-width:1440px){
+    .departCont > div.depart_bx .txt_bx p{line-height:28px;}
+    .departCont > div.depart_bx:nth-child(odd) > div:nth-child(2){padding:12px 0 0 62px;}
+    .departCont > div.depart_bx:nth-child(even) > div:nth-child(2){padding:12px 82px 0 0;}
+}
+
+@media only screen and  (max-width:1280px){
+    .dVisualArea .dv_txt{width:100%;padding:0 40px;}
+    .dVisualArea .dv_txt .cagBtnArea{width:700px;margin:0 auto;}
+    .dVisualArea .dv_txt .cagBtnArea .item{margin-bottom:10px;}
+    .typeDept article{margin-top:-50px;}
+    .departCont > div.depart_bx{display:block;padding:50px 0;}
+    .departCont > div.depart_bx:first-child{padding:50px 0;}
+    .departCont > div.depart_bx > div{width:100%;}
+    .departCont > div.depart_bx:nth-child(odd) > div:nth-child(1),
+    .departCont > div.depart_bx:nth-child(even) > div:nth-child(1){margin:0;}
+    .departCont > div.depart_bx:nth-child(odd) > div:nth-child(2),
+    .departCont > div.depart_bx:nth-child(even) > div:nth-child(2),.departCont #departmentG .txt_bx{padding:23px 0 0 0;}
+    .departCont > div.depart_bx .txt_bx h3{font-size:48px;line-height:62px;}
+    .departCont > div.depart_bx .txt_bx ul{margin-top:36px;}
+    .departCont #departmentA .txt_bx ul, .departCont #departmentD .txt_bx ul{width:100%;}
+}
+
+@media only screen and  (max-width:768px){
+    .departCont{padding:0 17px;}
+    .dVisualArea .dv_txt h2{font-size:44px;line-height:64px;margin-bottom:147px;}
+    .dVisualArea .dv_txt .cagBtnArea{width:100%;padding:0 24px;}
+    .dVisualArea .dv_txt .cagBtnArea .item{width:100%;}
+    .dVisualArea .dv_txt .cagBtnArea .item:not(:last-child){margin-right:0;}
+    .dVisualArea .dv_txt .cagBtnArea .item a{width:100%;padding:12px 24px 13px;}
+    .dVisualArea:after{height:36px;border-radius:20px 20px 0 0;}
+    .dVisualArea .dv_img{background-position:61% center;}
+    .typeDept article{margin-top:-36px;border-radius:20px 20px 0 0;}
+    .departCont > div.depart_bx{padding:30px 0 18px;}
+    .departCont > div.depart_bx:first-child{padding:50px 0 18px;}
+    .departCont > div.depart_bx .img_bx{border-radius:15px;height:240px;}    
+    .departCont > div.depart_bx .txt_bx h3{font-size:26px;line-height:36px;margin-bottom:10px;}
+    .departCont > div.depart_bx .txt_bx p{font-size:16px;line-height:24px;}
+    .departCont > div.depart_bx .txt_bx .btnArrow{padding:15px 49px 12px 29px;}
+    .departCont > div.depart_bx .txt_bx .btnArrow span{font-size:15px;line-height:16px;}
+    .departCont > div.depart_bx .txt_bx .btnArrow:after{right:24px;width:7px;height:12px;top:50%;}
+}
+
+@media only screen and  (max-width:480px){
+    .departCont > div.depart_bx .img_bx{height:184px;}
+
+}
+
+@media only screen and  (max-width:389px){
+    .dVisualArea .dv_txt .cagBtnArea{padding:0 14px;}
+}

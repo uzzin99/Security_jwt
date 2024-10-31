@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="그룹_8153" data-name="그룹 8153" transform="translate(-352 -320)">
+    <circle id="타원_148" data-name="타원 148" cx="50" cy="50" r="50" transform="translate(352 320)" fill="#f1f2f7"/>
+    <g id="_01_icon" data-name="01_icon" transform="translate(380 348)">
+      <path id="합치기_16" data-name="합치기 16" d="M22,2A19,19,0,0,0,3.022,20.094L3,20.549V44.1l6.587-8.591L11.155,36.6A19,19,0,0,0,35.436,7.566,18.875,18.875,0,0,0,22,2m0-2A21,21,0,1,1,10.012,38.246L1,50V20h.024A21,21,0,0,1,22,0Z" transform="translate(-0.001 -1)" fill="#343440"/>
+      <path id="빼기_4" data-name="빼기 4" d="M6793,3014a11,11,0,1,1,8.223-3.693l-6.4-6.4a1,1,0,1,0-1.414,1.416l6.357,6.358A10.891,10.891,0,0,1,6793,3014Z" transform="translate(-6771 -2983)" fill="#41c956"/>
+      <path id="타원_150" data-name="타원 150" d="M6,2a4,4,0,1,0,4,4A4,4,0,0,0,6,2M6,0A6,6,0,1,1,0,6,6,6,0,0,1,6,0Z" transform="translate(16 14)" fill="#f1f2f7"/>
+    </g>
+  </g>
+</svg>

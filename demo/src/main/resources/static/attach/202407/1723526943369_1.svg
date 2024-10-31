@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="그룹_8227" data-name="그룹 8227" transform="translate(6609 3454)">
+    <g id="Icon" transform="translate(-7475 -4321)">
+      <g id="그룹_7741" data-name="그룹 7741" transform="translate(-925 -70)">
+        <rect id="사각형_706" data-name="사각형 706" width="2" height="12" transform="translate(1808 959)" fill="#fff"/>
+        <rect id="사각형_707" data-name="사각형 707" width="2" height="8" transform="translate(1816 963)" fill="#fff"/>
+        <rect id="사각형_708" data-name="사각형 708" width="2" height="20" transform="translate(1832 951)" fill="#fff"/>
+        <rect id="사각형_738" data-name="사각형 738" width="2" height="16" transform="translate(1824 955)" fill="#fff"/>
+      </g>
+      <path id="패스_9849" data-name="패스 9849" d="M-6928.858-3285.214a1.494,1.494,0,0,1-.831-.252l-11.168-7.445-11.168,7.445a1.5,1.5,0,0,1-2.08-.416,1.5,1.5,0,0,1,.416-2.08l12.832-8.555,12.832,8.555a1.5,1.5,0,0,1,.416,2.08A1.5,1.5,0,0,1-6928.858-3285.214Z" transform="translate(7837.356 4211.714)" fill="#fff"/>
+      <path id="사각형_737" data-name="사각형 737" d="M7,3A4,4,0,0,0,3,7V37a4,4,0,0,0,4,4H53a4,4,0,0,0,4-4V7a4,4,0,0,0-4-4H7M7,0H53a7,7,0,0,1,7,7V37a7,7,0,0,1-7,7H7a7,7,0,0,1-7-7V7A7,7,0,0,1,7,0Z" transform="translate(866 869)" fill="#fff"/>
+    </g>
+    <rect id="사각형_2252" data-name="사각형 2252" width="60" height="60" transform="translate(-6609 -3454)" fill="none"/>
+  </g>
+</svg>

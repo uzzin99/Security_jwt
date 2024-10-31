@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.bvsMapper">
+
+	<select id="getUserList" resultType="USER_VO">
+		SELECT * FROM CMS_USER
+	</select>
+	
+	<select id="findByUser" resultType="USER_VO">
+		SELECT
+			CM.USER_ID
+			, CM.USER_NM
+			, CM.PWD
+			, CAG.TOP_AUTH_YN
+		FROM CMS_AUTH_GROUP CAG, CMS_AUTH_GROUP_MEMBER CAGM, CMS_USER CM
+		WHERE CM.USER_ID = #{USERNAME}
+		AND CAGM.USER_ID = #{USERNAME}
+		AND CAG.GROUP_SEQ = CAGM.GROUP_SEQ
+	</select>
+	
+	<update id="insertRefreshToken" parameterType="USER_VO">
+    	UPDATE CMS_USER SET 
+    		TOKEN = #{TOKEN}
+    		, USER_ID = #{USER_ID}
+		WHERE USER_ID = #{USER_ID}   		
+	</update>
+	
+	<select id="findUserByRefreshToken" resultType="USER_VO">
+		SELECT
+			CM.USER_ID
+			, CM.USER_NM
+			, CM.PWD
+			, CM.TOKEN
+			, CAG.TOP_AUTH_YN 
+		FROM CMS_AUTH_GROUP CAG, CMS_AUTH_GROUP_MEMBER CAGM, CMS_USER CM
+		WHERE CM.TOKEN = #{TOEKN}
+		AND CM.USER_ID = CAGM.USER_ID 
+		AND CAG.GROUP_SEQ = CAGM.GROUP_SEQ
+    </select>
+    
+    <select id="selectFrontMenuList" parameterType="hashmap" resultType="hashmap">
+		WITH WH AS (
+			SELECT CM.SITE_NO
+			      ,CM.MENU_NO
+			      ,CM.MENU_NM
+			      ,CM.LINK_SUB_YN
+			      ,CM.MENU_LVL
+			      ,CM.P_MENU_NO
+			      ,CM.MENU_URL
+			      ,CMA.NON_MEMBER_YN
+			      ,CMA.MEMBER_YN
+			      ,CMA.DEPT_YN
+			      ,CMA.ADMINGROUP_YN
+			      ,CMA.AUTH_DEPT_LIST
+			      ,CMA.AUTH_ADMINGROUP_LIST
+			      ,CM.VISUAL_VAL
+			      ,CONVERT(VARCHAR(100),CONVERT(CHAR(10),CM.MENU_LVL)+REPLICATE('0',2 - LEN(CM.ORDER_NO))+CONVERT(CHAR(10),CM.ORDER_NO)) SORT
+			      ,BS.BASE_PATH
+			  FROM CMS_SITE_GROUP BSG, CMS_SITE BS, CMS_MENU CM, CMS_MENU_AUTH CMA
+			 WHERE BSG.SITE_GROUP_NO = BS.SITE_GROUP_NO
+			   AND BS.SITE_NO = CM.SITE_NO
+			   AND CM.SITE_NO = CMA.SITE_NO
+			   AND CM.MENU_NO = CMA.MENU_NO
+			   AND BSG.SITE_GROUP_NO = #{SITE_GROUP_NO}
+			   AND BS.SITE_NO = #{SITE_NO}
+			   AND CM.MENU_LVL = 1
+			   AND CM.USE_YN = 'Y'
+			   AND CM.SHOW_YN = 'Y'
+			UNION ALL
+			SELECT CM.SITE_NO
+			      ,CM.MENU_NO
+			      ,CM.MENU_NM
+			      ,CM.LINK_SUB_YN
+			      ,CM.MENU_LVL
+			      ,CM.P_MENU_NO
+			      ,CM.MENU_URL
+			      ,CMA.NON_MEMBER_YN
+			      ,CMA.MEMBER_YN
+			      ,CMA.DEPT_YN
+			      ,CMA.ADMINGROUP_YN
+			      ,CMA.AUTH_DEPT_LIST
+			      ,CMA.AUTH_ADMINGROUP_LIST
+			      ,CM.VISUAL_VAL
+			      ,CONVERT(VARCHAR(100),CONVERT(CHAR(50),WH.SORT)+CONVERT(CHAR(10),CM.MENU_LVL)+REPLICATE('0',2 - LEN(CM.ORDER_NO))+CONVERT(CHAR(10),CM.ORDER_NO)) SORT
+			      ,BS.BASE_PATH
+			  FROM CMS_SITE_GROUP BSG, CMS_SITE BS, CMS_MENU CM, CMS_MENU_AUTH CMA, WH
+			 WHERE BSG.SITE_GROUP_NO = BS.SITE_GROUP_NO
+			   AND BS.SITE_NO = CM.SITE_NO
+			   AND CM.SITE_NO = CMA.SITE_NO
+			   AND CM.MENU_NO = CMA.MENU_NO
+			   AND CM.MENU_NO <![CDATA[<> ]]> 9999
+			   AND BSG.SITE_GROUP_NO = #{SITE_GROUP_NO}
+			   AND BS.SITE_NO = #{SITE_NO}
+			   AND CM.USE_YN = 'Y'
+			   AND CM.SHOW_YN = 'Y'
+			   AND WH.MENU_NO = CM.P_MENU_NO
+			)
+			SELECT *
+			      ,CASE WHEN LINK_SUB_YN = 'N' AND (CONT_TYPE = 'C0203' OR CONT_TYPE = 'C0205') THEN LINK_URL 
+			            ELSE 
+			            	CASE WHEN T1.BASE_PATH IS NOT NULL AND T1.BASE_PATH != '' THEN '/'+T1.MENU_URL+'?MENU_ID='+CONVERT(CHAR(10),T1.MENU_NO)
+			            	ELSE T1.MENU_URL+'?MENU_ID='+CONVERT(CHAR(10),T1.MENU_NO)
+			            	END
+			           	END REAL_URL 
+			  FROM (
+				SELECT *
+				      ,(SELECT TOP 1 CONT_TYPE FROM CMS_CONTENTS WHERE SITE_NO = WH.SITE_NO AND MENU_NO = WH.MENU_NO AND USE_YN = 'Y' ORDER BY ORD_NO) CONT_TYPE
+				      ,(SELECT TOP 1 LINK_URL FROM CMS_CONTENTS WHERE SITE_NO = WH.SITE_NO AND MENU_NO = WH.MENU_NO AND USE_YN = 'Y' ORDER BY ORD_NO) LINK_URL
+				      ,ISNULL((SELECT TOP 1 SETVAL FROM CMS_CONTENTS WHERE SITE_NO = WH.SITE_NO AND MENU_NO = WH.MENU_NO AND USE_YN = 'Y' ORDER BY ORD_NO),'_self') SETVAL
+				  FROM WH 
+				) T1
+			 ORDER BY SORT
+	</select>
+	
+	<select id="selectSiteMainConfig" parameterType="hashmap" resultType="hashmap">
+       	SELECT T2.CONFIG_CD
+			      ,T2.TEMP_CODE
+			      ,T2.SITE_NO
+			      ,T2.CONFIG_SEQ
+			      ,T2.AUTO_ROLL_YN
+			      ,T2.ROLL_TIME
+			      ,T2.VISUAL_GBN
+			      ,T2.SUB_TITLE
+			      ,T2.LINK_URL
+			      ,T2.WINDOW_YN
+			      ,T2.BG_TEXT
+		  FROM CMS_MAIN_CONFIG T1, CMS_SITE_MAIN_CONFIG T2
+		 WHERE T1.TEMP_CODE = T2.TEMP_CODE
+		   AND T1.CONFIG_CD = T2.CONFIG_CD
+		   AND T1.CONFIG_SEQ = T2.CONFIG_SEQ
+		   AND T1.TEMP_CODE = #{TEMP_CODE}
+		   AND T2.SITE_NO = #{SITE_NO}
+    </select>
+    
+ 	<select id="selectSiteMainMenuData" parameterType="hashmap" resultType="hashmap">
+		SELECT T3.TEMP_CODE
+		         ,T3.CONFIG_CD
+		         ,T3.CONFIG_SEQ
+		         ,T3.SUB_SEQ
+		         ,T3.SITE_NO
+		         ,T3.BOARDSITE_NO
+				 ,T3.BOARD_CD
+				 ,T3.BOARD_CATEGORY_NO
+				 ,T3.DEPT_CD
+		  FROM CMS_MAIN_CONFIG T1, CMS_SITE_MAIN_CONFIG T2, CMS_SITE_MAIN_CONFIG_SUB T3
+		 WHERE T1.TEMP_CODE = T2.TEMP_CODE
+		   AND T1.CONFIG_CD = T2.CONFIG_CD
+		   AND T1.CONFIG_SEQ = T2.CONFIG_SEQ
+		   AND T2.TEMP_CODE = T3.TEMP_CODE
+		   AND T2.CONFIG_CD = T3.CONFIG_CD
+		   AND T2.CONFIG_SEQ = T3.CONFIG_SEQ
+		   AND T2.SITE_NO = T3.SITE_NO
+		   AND T1.TEMP_CODE = #{TEMP_CODE}
+		   AND T2.CONFIG_CD = #{CONFIG_CD}
+		   AND T2.CONFIG_SEQ = #{CONFIG_SEQ}
+		   AND T2.SITE_NO = #{SITE_NO}
+		   AND T3.USE_YN = 'Y'
+		   AND T3.DEL_YN = 'N'
+		   ORDER BY T3.ORD_NO
+    </select>
+    
+   <select id="selectBoardConfInfo" parameterType="hashmap" resultType="hashmap">
+    	SELECT T3.BOARD_SEQ
+            ,T3.SITE_NO
+            ,T3.BOARD_NM
+            ,T3.BOARD_TYPE
+            ,T3.USE_CATEGORY_YN
+            ,T3.USE_NOTICE_YN
+            ,T3.USE_USERINFO_YN
+            ,T3.USE_HITS_YN
+            ,T3.USE_SNS_YN
+            ,T3.USE_LIKE_YN
+            ,T3.USE_PREVNEXT_YN
+            ,T3.USE_REPLY_YN
+            ,T3.USE_COMMENT_YN
+            ,T3.USE_EDITOR_YN
+            ,T3.USE_PERIOD_YN
+            ,T3.USE_SECRET_YN
+            ,T3.USE_ATTACH_YN
+            ,T3.NOTICE_LIMIT
+            ,T3.NOTICE_PERIOD_YN
+            ,T3.PAGE_LEN
+            ,T3.FILE_LIMIT
+            ,T3.FILE_SIZE_LIMIT
+            ,T3.FORCE_SECRET_YN
+            ,T3.SHOWTYPE
+            ,T3.USE_REG_DT_YN
+		 FROM CMS_MENU T1, CMS_CONTENTS T2, CMS_BOARD_CONF T3 WITH(NOLOCK)
+		 WHERE T1.SITE_NO = T2.SITE_NO
+		   AND T1.MENU_NO = T2.MENU_NO
+		   AND T2.BOARDSITE_NO = T3.SITE_NO
+		   AND T2.BOARD_CD = T3.BOARD_SEQ
+		   AND T2.SITE_NO = #{SITE_NO}
+		   AND T2.MENU_NO = #{MENU_NO}
+		   AND T2.CONTENTS_NO = #{CONTENTS_NO}
+    </select>
+    
+   <select id="selectSiteMainBbsNoticeItemList" parameterType="hashmap" resultType="hashmap">
+		SELECT TOP ${NOTICE_LIMIT}
+			       T3.SITE_NO
+			      ,T3.BOARD_SEQ
+			      ,T3.BBS_SEQ
+			      ,T3.SUBJECT
+			      ,T3.WRITER_NM
+			      ,T3.CONTENTS
+			      ,(SELECT COUNT(1) FROM CMS_BOARD WHERE SITE_NO = T3.SITE_NO AND BOARD_SEQ = T3.BOARD_SEQ AND P_BBS_SEQ = T3.BBS_SEQ AND USE_YN = 'Y') REPLY_CNT
+			      ,(SELECT BOARD_TYPE FROM CMS_BOARD_CONF WHERE SITE_NO = T3.SITE_NO AND BOARD_SEQ = T3.BOARD_SEQ) BOARD_TYPE
+			      ,T3.LINK_URL
+			      ,ISNULL(T3.LINK_URL_YN,'N') AS LINK_URL_YN
+			      ,CONVERT(CHAR(10),T3.WRITE_DT,102) WRITE_DATE
+			      ,CONVERT(CHAR(10),T3.WRITE_DT,2) WRITE_DATE2
+			      ,(SELECT CATEGORY_NM FROM CMS_BOARD_CATEGORY WHERE SITE_NO = T3.SITE_NO AND BOARD_SEQ = T3.BOARD_SEQ AND CATE_SEQ = T3.CATE_SEQ) AS CATEGORY_NM
+			      ,#{TEMP_CODE} AS TEMP_CODE
+			      ,#{BASE_SITE_NO} AS BASE_SITE_NO
+			      ,#{CONFIG_CD} AS CONFIG_CD
+			      ,#{CONFIG_SEQ} AS CONFIG_SEQ
+			      ,#{SUB_SEQ} AS SUB_SEQ
+			  FROM CMS_MENU T1, CMS_CONTENTS T2, CMS_BOARD T3 WITH(NOLOCK)
+			 WHERE T1.SITE_NO = T2.SITE_NO
+			   AND T1.MENU_NO = T2.MENU_NO
+			   AND T2.BOARDSITE_NO = T3.SITE_NO
+			   AND T2.BOARD_CD = T3.BOARD_SEQ
+			   AND T2.SITE_NO = #{SITE_NO}
+			   AND T2.MENU_NO = #{MENU_NO}
+			   AND T2.CONTENTS_NO = #{CONTENTS_NO}
+			   AND T3.OPEN_YN = 'Y'
+			   AND T3.SECRET_YN = 'N'
+			   AND T3.USE_YN = 'Y'
+			   AND T3.P_BBS_SEQ IS NULL
+			   AND (T2.BOARD_CATEGORY_NO IS NULL OR T2.BOARD_CATEGORY_NO = T3.CATE_SEQ)
+			   AND (T3.NOTICE_YN = 'Y' 
+			   	AND (T3.TOP_START_DT IS NULL OR CONVERT(CHAR(8),TOP_START_DT,112) <![CDATA[<=]]> CONVERT(CHAR(8),GETDATE(),112)) 
+			   	AND (T3.TOP_END_DT IS NULL OR CONVERT(CHAR(8),TOP_END_DT,112) <![CDATA[>=]]> CONVERT(CHAR(8),GETDATE(),112)))
+			 ORDER BY WRITE_DT DESC
+    </select>
+    
+    <select id="selectSiteMainRandomBbsItemList" parameterType="hashmap" resultType="hashmap">
+		SELECT TOP ${BBS_CNT}
+			       T3.SITE_NO
+			      ,T3.BOARD_SEQ
+			      ,T3.BBS_SEQ
+			      ,T3.SUBJECT
+			      ,T3.WRITER_NM
+			      ,T3.CONTENTS
+			      ,(SELECT COUNT(1) FROM CMS_BOARD WHERE SITE_NO = T3.SITE_NO AND BOARD_SEQ = T3.BOARD_SEQ AND P_BBS_SEQ = T3.BBS_SEQ AND USE_YN = 'Y') REPLY_CNT
+			      ,(SELECT BOARD_TYPE FROM CMS_BOARD_CONF WHERE SITE_NO = T3.SITE_NO AND BOARD_SEQ = T3.BOARD_SEQ) BOARD_TYPE
+			      ,T3.LINK_URL
+			      ,ISNULL(T3.LINK_URL_YN,'N') AS LINK_URL_YN
+			      ,CONVERT(CHAR(10),T3.WRITE_DT,102) WRITE_DATE
+			      ,CONVERT(CHAR(10),T3.WRITE_DT,2) WRITE_DATE2
+			      ,(SELECT CATEGORY_NM FROM CMS_BOARD_CATEGORY WHERE SITE_NO = T3.SITE_NO AND BOARD_SEQ = T3.BOARD_SEQ AND CATE_SEQ = T3.CATE_SEQ) AS CATEGORY_NM
+			      ,#{TEMP_CODE} AS TEMP_CODE
+			      ,#{BASE_SITE_NO} AS BASE_SITE_NO
+			      ,#{CONFIG_CD} AS CONFIG_CD
+			      ,#{CONFIG_SEQ} AS CONFIG_SEQ
+			      ,#{SUB_SEQ} AS SUB_SEQ
+			  FROM CMS_MENU T1, CMS_CONTENTS T2, CMS_BOARD T3 WITH(NOLOCK)
+			 WHERE T1.SITE_NO = T2.SITE_NO
+			   AND T1.MENU_NO = T2.MENU_NO
+			   AND T2.BOARDSITE_NO = T3.SITE_NO
+			   AND T2.BOARD_CD = T3.BOARD_SEQ
+			   AND T2.SITE_NO = #{SITE_NO}
+			   AND T2.MENU_NO = #{MENU_NO}
+			   AND T2.CONTENTS_NO = #{CONTENTS_NO}
+			   AND T3.OPEN_YN = 'Y'
+			   AND T3.SECRET_YN = 'N'
+			   AND T3.USE_YN = 'Y'
+			   AND T3.P_BBS_SEQ IS NULL
+			   AND (T2.BOARD_CATEGORY_NO IS NULL OR T2.BOARD_CATEGORY_NO = T3.CATE_SEQ)
+			   AND ((T3.OPEN_YN='Y' AND T3.START_DT IS NULL AND T3.END_DT IS NULL )  OR 
+        			(T3.OPEN_YN = 'S' 
+       				 AND (T3.START_DT IS NOT NULL AND CONVERT(CHAR(8),T3.START_DT,112) <![CDATA[<=]]> CONVERT(CHAR(8),GETDATE(),112)) 
+       				 AND (T3.END_DT IS NOT NULL AND CONVERT(CHAR(8),T3.END_DT,112) <![CDATA[>=]]> CONVERT(CHAR(8),GETDATE(),112))))
+       		   <if test='USE_NOTICE_YN=="Y"'>
+				    AND (NOTICE_YN='N' 
+				    	OR (T3.NOTICE_YN = 'Y' 
+				    	AND (T3.TOP_START_DT IS NOT NULL AND CONVERT(CHAR(8),T3.TOP_START_DT,112) <![CDATA[>]]> CONVERT(CHAR(8),GETDATE(),112)) 
+				    	OR (T3.TOP_END_DT IS NOT NULL AND CONVERT(CHAR(8),T3.TOP_END_DT,112) <![CDATA[<]]> CONVERT(CHAR(8),GETDATE(),112))))
+			   </if>	 
+			 ORDER BY WRITE_DT DESC
+    </select>
+    
+    <select id="selectSiteMainConfigSubList" parameterType="hashmap" resultType="hashmap">
+        	SELECT T3.CONFIG_CD
+					 , T3.TEMP_CODE
+					 , T3.SITE_NO
+					 , T3.CONFIG_SEQ
+					 , T3.SUB_SEQ
+					 , T3.TEXT1
+					 , T3.TEXT2
+					 , T3.TEXT3
+					 , T3.TEXT4
+					 , T3.TEXT5
+					 , T3.TEXT6
+					 , T3.COLOR_CD
+					 , T3.PC_FILE_NM
+					 , T3.PC_FILE_NM_SAVED
+					 , T3.PC_FILE_SIZE
+					 , T3.MOBILE_FILE_NM
+					 , T3.MOBILE_FILE_NM_SAVED
+					 , T3.MOBILE_FILE_SIZE
+					 , T3.SUB_TEXT
+					 , T3.CONTENTS
+					 , T3.WINDOW_YN
+					 , T3.LINK_URL
+					 , T3.BOARDSITE_NO
+					 , T3.BOARD_CD
+					 , T3.BOARD_CATEGORY_NO
+					 , T3.DEPT_CD
+					 , (SELECT CMN_NAME FROM CMS_CMN_CODE WHERE CMN_CODE=T3.DEPT_CD) AS DEPT_NAME
+					 , T3.LINK_STIME
+					 , T3.LINK_ETIME
+					 , T3.POP_STIME
+					 , T3.POP_ETIME
+					 , T3.LINK_URL2
+					 , T3.WINDOW_YN2 
+					 , T3.LINK_URL3
+					 , T3.WINDOW_YN3 
+					 , T3.BTN_TEXT1
+					 , T3.BTN_TEXT2
+					 , CASE WHEN T3.CONFIG_CD = 'C1404' THEN (SELECT CMN_VALUE FROM CMS_CMN_CODE WHERE P_CMN_CODE = 'C15' AND CMN_CODE = T3.DEPT_CD)
+					           ELSE T3.DEPT_CD END DEPT_CD_NM
+					 , T3.ORD_NO
+				  FROM CMS_MAIN_CONFIG T1, CMS_SITE_MAIN_CONFIG T2, CMS_SITE_MAIN_CONFIG_SUB T3
+				 WHERE T1.TEMP_CODE = T2.TEMP_CODE
+				   AND T1.CONFIG_CD = T2.CONFIG_CD
+				   AND T1.CONFIG_SEQ = T2.CONFIG_SEQ
+				   AND T2.TEMP_CODE = T3.TEMP_CODE
+				   AND T2.CONFIG_CD = T3.CONFIG_CD
+				   AND T2.CONFIG_SEQ = T3.CONFIG_SEQ
+				   AND T2.SITE_NO = T3.SITE_NO
+				   AND T1.TEMP_CODE = #{TEMP_CODE}
+				   AND T2.SITE_NO = #{SITE_NO}
+				   AND T2.CONFIG_CD = #{CONFIG_CD}
+				   AND T2.CONFIG_SEQ = #{CONFIG_SEQ}
+				   AND T3.USE_YN = 'Y'
+				   AND T3.DEL_YN = 'N'
+				 ORDER BY T3.ORD_NO 
+    </select>
+    
+   	<select id="selectSiteMainConfigSubItemList" parameterType="hashmap" resultType="hashmap">
+		SELECT T3.CONFIG_CD
+			 , T3.TEMP_CODE
+			 , T3.SITE_NO
+			 , T3.CONFIG_SEQ
+			 , T3.SUB_SEQ
+			 , T3.TEXT
+			 , T3.SUB_TEXT
+			 , T3.WINDOW_YN
+			 , T3.LINK_URL
+			 , T3.ORD_NO
+		FROM CMS_MAIN_CONFIG T1, CMS_SITE_MAIN_CONFIG T2, CMS_SITE_MAIN_CONFIG_SUB_ITEM T3
+		WHERE T1.TEMP_CODE = T2.TEMP_CODE
+		AND T1.CONFIG_CD = T2.CONFIG_CD
+		AND T1.CONFIG_SEQ = T2.CONFIG_SEQ
+		AND T2.TEMP_CODE = T3.TEMP_CODE
+		AND T2.CONFIG_CD = T3.CONFIG_CD
+		AND T2.CONFIG_SEQ = T3.CONFIG_SEQ
+		AND T2.SITE_NO = T3.SITE_NO
+		AND T1.TEMP_CODE = #{TEMP_CODE}
+		AND T2.SITE_NO = #{SITE_NO}
+		AND T2.CONFIG_CD = #{CONFIG_CD}
+		AND T2.CONFIG_SEQ = #{CONFIG_SEQ}
+		AND T3.USE_YN = 'Y'
+		AND T3.DEL_YN = 'N'
+		ORDER BY T3.ORD_NO 
+    </select>
+    
+    <select id="selectFooterInfo" parameterType="hashmap" resultType="hashmap">
+        	SELECT BASIC_SEQ
+				      ,BASIC_NM
+				      ,ADDRESS
+				      ,TEL
+				      ,FAX
+				      ,COPYRIGHT
+				      ,CONTENTS
+				      ,MARKMAN
+				      ,EMAIL
+				      ,REG_NUMBER
+				      ,IDENTITI_NUMBER
+			  FROM CMS_BASIC_INFO
+			 WHERE BASIC_SEQ = #{BASIC_SEQ}
+    </select>
+    
+    <select id="selectFooterLinkGroupList" parameterType="hashmap" resultType="hashmap">
+       	SELECT BASIC_SEQ
+			      ,LINK_GROUP_CD
+			      ,LINK_GROUP_NM
+		  FROM CMS_BASIC_LINK_GROUP
+		 WHERE BASIC_SEQ = #{BASIC_SEQ}
+		    AND USE_YN = 'Y'
+		 ORDER BY LINK_GROUP_CD
+    </select>
+    
+    <select id="selectFooterSiteList" parameterType="hashmap" resultType="hashmap">
+		SELECT T2.BASIC_SEQ
+			      ,T2.INFO_SEQ
+			      ,T2.GBN
+			      ,T2.TEXT
+			      ,T2.URL
+			      ,T2.SETVAL
+			      ,T2.PC_FILE_NM
+			      ,T2.PC_FILE_NM_SAVED
+			      ,T2.PC_FILE_SIZE
+			      ,T2.REP_TEXT
+		  FROM CMS_BASIC_INFO T1, CMS_BASIC_SITE_INFO T2
+		 WHERE T1.BASIC_SEQ = T2.BASIC_SEQ
+		   AND T2.BASIC_SEQ = #{BASIC_SEQ}
+		   AND T2.GBN = #{GBN}
+		   AND T1.USE_YN = 'Y'
+		   AND T2.USE_YN = 'Y'
+		 ORDER BY INFO_SEQ
+    </select>
+	
+</mapper>

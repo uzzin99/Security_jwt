@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <g id="On" transform="translate(-1660 -150)">
+    <rect id="사각형_445" data-name="사각형 445" width="200" height="60" rx="10" transform="translate(1660 150)" fill="#bfddd7" opacity="0.8"/>
+    <text id="신구대학교_VR캠퍼스_체험" data-name="신구대학교
+VR캠퍼스 체험" transform="translate(1675 176)" fill="#183b3f" font-size="16" font-family="Pretendard-SemiBold, Pretendard" font-weight="600"><tspan x="0" y="0">신구대학교</tspan><tspan x="0" y="20">VR캠퍼스 체험</tspan></text>
+    <g id="그룹_7802" data-name="그룹 7802" transform="translate(1493.648 -146.115)">
+      <path id="패스_13433" data-name="패스 13433" d="M296.441,358.64l8.942-20.559H339.31l8.942,20.559Z" transform="translate(0 -14.969)" fill="#fff"/>
+      <path id="패스_13434" data-name="패스 13434" d="M349.074,357.285H310.282l5.218-14.571h28.358Z" transform="translate(-7.331 -17.423)" fill="#bfddd7"/>
+      <line id="선_17" data-name="선 17" x2="33.997" transform="translate(305.646 329.433)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="패스_13435" data-name="패스 13435" d="M350.6,317.132a7.312,7.312,0,1,0-13.034,4.545,34.9,34.9,0,0,1,5.325,9.816l.4,1.084.429-1.171a42.007,42.007,0,0,1,5.511-10.016,7.259,7.259,0,0,0,1.371-4.257" transform="translate(-20.94)" fill="#ff6e4c"/>
+      <path id="패스_13436" data-name="패스 13436" d="M351.19,322.42a2.616,2.616,0,1,1-2.616-2.616,2.616,2.616,0,0,1,2.616,2.616" transform="translate(-26.228 -5.288)" fill="#fff"/>
+      <line id="선_18" data-name="선 18" x2="1.753" y2="10.429" transform="translate(329.699 329.433)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="선_19" data-name="선 19" y1="14.571" x2="2.449" transform="translate(313.242 325.291)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="선_20" data-name="선 20" x2="27.838" transform="translate(313.904 335.921)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

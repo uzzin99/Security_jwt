@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="사각형_2162" data-name="사각형 2162" d="M0,0H42a0,0,0,0,1,0,0V14a6,6,0,0,1-6,6H6a6,6,0,0,1-6-6V0A0,0,0,0,1,0,0Z" transform="translate(7.456 22.748)"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_8158" data-name="그룹 8158" transform="translate(-1282 -320)">
+    <circle id="타원_142" data-name="타원 142" cx="50" cy="50" r="50" transform="translate(1282 320)" fill="#f1f2f7"/>
+    <g id="_04_icon" data-name="04_icon" transform="translate(1303.544 347.252)">
+      <g id="마스크_그룹_66" data-name="마스크 그룹 66" transform="translate(0 1)" clip-path="url(#clip-path)">
+        <path id="사각형_740" data-name="사각형 740" d="M2,2V22a4,4,0,0,0,4,4H36a4,4,0,0,0,4-4V2H2M0,0H42V22a6,6,0,0,1-6,6H6a6,6,0,0,1-6-6Z" transform="translate(7.456 14.748)" fill="#343440"/>
+      </g>
+      <path id="빼기_5" data-name="빼기 5" d="M5887.456,3022.749l-31-14,31-14,31,14-31,14Zm-4-16a1,1,0,0,0,0,2h8a1,1,0,1,0,0-2Z" transform="translate(-5859 -2994)" fill="#41c956"/>
+    </g>
+  </g>
+</svg>

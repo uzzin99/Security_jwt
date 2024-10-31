@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_2162" data-name="사각형 2162" width="72" height="72" transform="translate(1099 395)" fill="none" opacity="0.44"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_68" data-name="마스크 그룹 68" transform="translate(-1099 -395)" clip-path="url(#clip-path)">
+    <g id="_05" data-name="05" transform="translate(0 1)">
+      <g id="_05_icon" data-name="05_icon">
+        <path id="선_17" data-name="선 17" d="M69,.5H0v-1H69Z" transform="translate(1100 440.5)" fill="#707070"/>
+        <g id="그룹_1070" data-name="그룹 1070" transform="translate(8 -20)">
+          <path id="사각형_720" data-name="사각형 720" d="M8,1A7.008,7.008,0,0,0,1,8V42a7.008,7.008,0,0,0,7,7H62a7.008,7.008,0,0,0,7-7V8a7.008,7.008,0,0,0-7-7H8M8,0H62a8,8,0,0,1,8,8V42a8,8,0,0,1-8,8H8a8,8,0,0,1-8-8V8A8,8,0,0,1,8,0Z" transform="translate(1092 420)" fill="#707070"/>
+          <g id="그룹_1068" data-name="그룹 1068" transform="translate(0 2)">
+            <rect id="사각형_723" data-name="사각형 723" width="10" height="1" transform="translate(1122 468) rotate(90)" fill="#fff"/>
+            <path id="사각형_723_-_윤곽선" data-name="사각형 723 - 윤곽선" d="M0,0H10V1H0Z" transform="translate(1122 468) rotate(90)" fill="#707070"/>
+            <rect id="사각형_724" data-name="사각형 724" width="10" height="1" transform="translate(1135 468) rotate(90)" fill="#fff"/>
+            <path id="사각형_724_-_윤곽선" data-name="사각형 724 - 윤곽선" d="M0,0H10V1H0Z" transform="translate(1135 468) rotate(90)" fill="#707070"/>
+            <rect id="사각형_725" data-name="사각형 725" width="22" height="1" transform="translate(1117 478)" fill="#fff"/>
+            <path id="사각형_725_-_윤곽선" data-name="사각형 725 - 윤곽선" d="M0,0H22V1H0Z" transform="translate(1117 478)" fill="#707070"/>
+          </g>
+          <g id="그룹_1069" data-name="그룹 1069" transform="translate(-2)">
+            <circle id="타원_67" data-name="타원 67" cx="12" cy="12" r="12" transform="translate(1102 429)" fill="#41c956"/>
+            <rect id="사각형_721" data-name="사각형 721" width="22" height="1" transform="translate(1134 437)" fill="#fff"/>
+            <path id="사각형_721_-_윤곽선" data-name="사각형 721 - 윤곽선" d="M0,0H22V1H0Z" transform="translate(1134 437)" fill="#707070"/>
+            <rect id="사각형_722" data-name="사각형 722" width="12" height="1" transform="translate(1134 444)" fill="#fff"/>
+            <path id="사각형_722_-_윤곽선" data-name="사각형 722 - 윤곽선" d="M0,0H12V1H0Z" transform="translate(1134 444)" fill="#707070"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
