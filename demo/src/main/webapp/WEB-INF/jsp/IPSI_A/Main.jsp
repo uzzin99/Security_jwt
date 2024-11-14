@@ -33,7 +33,6 @@ var gnbDep3 = 0;
     });
     
     function fn_link_boardlist(tabGbn){
-    	console.log("33333");
     	var tempcd = $("section.mNoticeCont."+tabGbn).find("div.contTab.on").data("tempcd");
     	var basesiteno = $("section.mNoticeCont."+tabGbn).find("div.contTab.on").data("basesiteno");
     	var configcd = $("section.mNoticeCont."+tabGbn).find("div.contTab.on").data("configcd");
@@ -77,7 +76,6 @@ $(document).ready(function() {
             <!-- 텍스트배너1 -->
 			if(data.mainConfigC1432_1) {
 				$(".vBanner .bnrOverBx h3").html(data.mainConfigC1432_1.SUB_TITLE);
-				
 				if(data.mainConfigSubC1432_1){
 					const list = data.mainConfigSubC1432_1[0];
 					$(".vBanner .bnrOverBx .bnr_bx1").css("background-image","url(/attach/" + list.PC_FILE_NM_SAVED + ")");
@@ -95,7 +93,7 @@ $(document).ready(function() {
 					
 				}
 			}
-			<!-- 텍스트배너1 -->
+			<!-- //텍스트배너1 -->
 			
 			<!-- 텍스트배너2 -->
 			if(data.mainConfigC1433_1) {
@@ -135,7 +133,7 @@ $(document).ready(function() {
 			<!-- 텍스트배너3 -->
 			
 			<!-- 텍스트배너4 -->
-			if(data.mainConfigC1433_2) {
+			if(data.mainConfigC1433_3) {
 				$(".vBanner .bnr_bx4 h3").html(data.mainConfigC1433_3.SUB_TITLE);
 				
 				if(data.mainConfigSubC1433_3){

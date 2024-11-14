@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_2198" data-name="사각형 2198" width="36" height="20" transform="translate(1364 35)" fill="#132229" stroke="#132229" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Icon1" transform="translate(-1332 25)">
+    <circle id="타원_142" data-name="타원 142" cx="50" cy="50" r="50" transform="translate(1332 -25)" fill="#fff"/>
+    <g id="그룹_8144" data-name="그룹 8144" transform="translate(0 -3)">
+      <rect id="사각형_2197" data-name="사각형 2197" width="2" height="14" rx="1" transform="translate(1363 10)" fill="#132229"/>
+      <g id="마스크_그룹_69" data-name="마스크 그룹 69" transform="translate(0 -3)" clip-path="url(#clip-path)">
+        <path id="타원_154" data-name="타원 154" d="M18,2A16,16,0,0,0,6.686,29.314,16,16,0,0,0,29.314,6.686,15.9,15.9,0,0,0,18,2m0-2A18,18,0,1,1,0,18,18,18,0,0,1,18,0Z" transform="translate(1364 35)" fill="#132229"/>
+      </g>
+      <path id="타원_153" data-name="타원 153" d="M11,2a9,9,0,1,0,9,9,9.01,9.01,0,0,0-9-9m0-2A11,11,0,1,1,0,11,11,11,0,0,1,11,0Z" transform="translate(1371 10)" fill="#132229"/>
+      <path id="다각형_12" data-name="다각형 12" d="M22,0,44,8,22,16,0,8Z" transform="translate(1360 3)" fill="#94c948"/>
+    </g>
+  </g>
+</svg>

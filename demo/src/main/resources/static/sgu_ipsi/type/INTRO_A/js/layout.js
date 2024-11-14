@@ -5,8 +5,8 @@ $(function(){
 var ui = {
 	init : function() {
 		//ui.select.init();		//selectBox
-		ui.swiper.init();
-		//ui.LayerPop.init();
+		//ui.swiper.init();
+		ui.LayerPop.init();
 		ui.Tab.init();
 		//ui.Accordion.init();
 		ui.contentSet();

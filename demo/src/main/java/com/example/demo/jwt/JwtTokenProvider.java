@@ -2,11 +2,13 @@ package com.example.demo.jwt;
 
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.demo.vo.USER_VO;
 import com.example.demo.web.ReissueService;
@@ -26,15 +28,17 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class JwtTokenProvider {
 
-    private String secretKey = "webfirewood";
+//    private String secretKey = "64461f01e1af406da538b9c48d801ce59142452199ff112fb5404c8e7e98e3ff";
 
+    @Value("${jwt.secret}")
+    String secretKey;
+    
     // 토큰 유효시간 하루
     private long accessTokenValidTime = 60 * 60 * 1000L; //1시간 (60 * 1000L == 1분)
     private long refreshTokenValidTime = 24 * 60 * 60 * 1000L; //하루
 
     private final UserDetailsService userDetailsService;
     private final ReissueService reissueService;
-    
     
     // JWT 토큰 생성
     public JwtToken createToken(String userPk, String roles) {
@@ -81,7 +85,7 @@ public class JwtTokenProvider {
     }
     
     // Jwt 토큰 복호화해서 가져오기
-    private Claims parseClaims(String token) {
+	private Claims parseClaims(String token) {
         try {
             return Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody();
         } catch (ExpiredJwtException e) {
@@ -123,5 +127,12 @@ public class JwtTokenProvider {
             .setExpiration(new Date(now.getTime() + accessTokenValidTime))
             .signWith(SignatureAlgorithm.HS256, secretKey)
             .compact();
+    }
+    
+    // 게스트 토큰 확인
+    public boolean isGuestToken(String token) {
+    	Claims claims = parseClaims(token);
+    	
+        return "ROLE_GUEST".equals(claims.get("roles"));
     }
 }

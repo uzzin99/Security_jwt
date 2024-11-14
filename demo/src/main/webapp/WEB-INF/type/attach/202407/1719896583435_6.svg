@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_2159" data-name="사각형 2159" width="72" height="72" transform="translate(562 395)" fill="none" opacity="0.44"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_65" data-name="마스크 그룹 65" transform="translate(-562 -395)" clip-path="url(#clip-path)">
+    <g id="_02" data-name="02" transform="translate(175)">
+      <g id="_02_icon" data-name="02_icon" transform="translate(-167 -19)">
+        <rect id="사각형_739" data-name="사각형 739" width="61" height="35" rx="8" transform="translate(560 419)" fill="#fff"/>
+        <path id="사각형_739_-_윤곽선" data-name="사각형 739 - 윤곽선" d="M8,1A7.008,7.008,0,0,0,1,8V27a7.008,7.008,0,0,0,7,7H53a7.008,7.008,0,0,0,7-7V8a7.008,7.008,0,0,0-7-7H8M8,0H53a8,8,0,0,1,8,8V27a8,8,0,0,1-8,8H8a8,8,0,0,1-8-8V8A8,8,0,0,1,8,0Z" transform="translate(560 419)" fill="#707070"/>
+        <path id="합치기_18" data-name="합치기 18" d="M8761,4313v-14c0-6.075,6.49-11,14.5-11s14.5,4.925,14.5,11v14Z" transform="translate(-8185 -3845)" fill="#fff"/>
+        <path id="합치기_18_-_윤곽선" data-name="합치기 18 - 윤곽선" d="M8789,4312v-13a8.832,8.832,0,0,0-3.852-6.981A15.993,15.993,0,0,0,8775.5,4289c-7.444,0-13.5,4.486-13.5,10v13h27m1,1h-29v-14c0-6.075,6.49-11,14.5-11s14.5,4.925,14.5,11Z" transform="translate(-8185 -3845)" fill="#707070"/>
+        <path id="패스_9833" data-name="패스 9833" d="M0,0H49L46,22H3Z" transform="translate(566 459)" fill="#fff"/>
+        <path id="패스_9833_-_윤곽선" data-name="패스 9833 - 윤곽선" d="M1.146,1,3.873,21H45.127L47.854,1H1.146M0,0H49L46,22H3Z" transform="translate(566 459)" fill="#707070"/>
+        <circle id="타원_60" data-name="타원 60" cx="8.5" cy="8.5" r="8.5" transform="translate(582 424)" fill="#41c956"/>
+      </g>
+    </g>
+  </g>
+</svg>

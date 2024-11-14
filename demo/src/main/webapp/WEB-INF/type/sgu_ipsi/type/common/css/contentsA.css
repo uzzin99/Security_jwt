@@ -1,0 +1,1369 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap'); /* 취업안내,학과안내 특수폰트 : font-family: "Poppins", sans-serif; */
+
+:root{
+    --primary: #2DAB40;
+}
+
+/* tab */
+.tabWrap{padding:0;}
+
+/* 입학상담 */
+.termsArea .headLine3s{margin-bottom:5px;} 
+.applyTable .a_name .inputBase{width:400px;}
+.applyTable .telNumber{display:flex;flex-wrap:wrap;align-content:center;align-items:center;}
+.applyTable .telNumber .bar{padding:0 8px;}
+.applyTable .a_tel .inputBase,.applyTable .a_tel .selectBase,.applyTable .a_tel .selectBase .toggleBtn{width:120px;}
+.applyTable .selectBase,.applyTable .selectBase>.toggleBtn{height:40px;}
+.applyTable .selectBase>.toggleBtn::before{top:16px;}
+.applyTable .selectBase>.toggleBtn>.base{padding:7px 40px 8px 16px;}
+.applyTable .lineTop_tbArea th, .applyTable .lineTop_tbArea td{text-align:left;}
+.applyTable .lineTop_tbArea th{padding:14px 25px;}
+.applyTable th span,
+.applyTable .lineTop_tbArea .lineTop_tbL2 th>span{width:11px;display:inline-block;}
+
+
+/* 신청완료 */
+.formApplyResult .box_bg{padding:187px 24px 45px;background-position:center top 54px;}
+.formApplyResult .box_bg .tit_h2{font-size:30px;line-height:36px;min-height:44px;margin-bottom:9px;word-break:keep-all;}
+.formApplyResult .box_bg .txtBody1{font-size:18px;line-height:26px;color:#111;}
+.formApplyResult .box_bg .btn_Area{margin:43px 0 0 0;}
+.formApplyResult .box_bg .baseBtn{min-width:150px;}
+.formApplyResult .box_bg .baseBtn>.base{font-size:18px;font-weight:500;line-height:24px;padding:15px 24px 13px 24px;}
+/* 입학상담 신청완료 */
+.admissionsResult .box_bg{background-position:center top 52px;}
+/* 입학자료 신청완료 */
+.materialsResult .box_bg{background-position:left calc(50% + 5px) top 59px;}
+
+
+/* 게시판 공통 */
+.boardCommon .no_article{padding:160px 0 50px 0;background-size:100px auto;background-position:center top 50px;}
+.boardCommon .board_table{width:100%;position:relative;border-top:2px solid #111;text-align:center;}
+.boardCommon .board_table th,.boardCommon .board_table td{font-family:"Roboto", 'Noto Sans KR', sans-serif;font-size:16px;line-height:26px;letter-spacing:0;vertical-align:middle;word-break:break-all;}
+.boardCommon .board_table tr{border-bottom:1px solid #D1D1D1;}
+.boardCommon .board_table th{font-weight:500;color:#111;padding:14px 5px 12px;background-color:#f1f2f7;}
+.boardCommon .board_table td{color:#000;font-weight:400;padding:14px 10px 15px 15px;}
+.boardCommon .board_table a:hover{text-decoration:underline;text-underline-offset:3px;color:#2DAB40;}
+.boardCommon .answer{color:#2DAB40;margin-left:5px;}
+.boardCommon .pagination{box-sizing:content-box;text-align:center;vertical-align:middle;}
+.boardCommon .pagination a,.boardCommon .pagination>a>span{width:38px;height:38px;}
+.boardCommon .hasfile{display:inline-block;overflow:hidden;width:15px;height:20px;background:url(../img/board/ico_doc.png) no-repeat 0 50%;text-indent:-100px;vertical-align: middle;}
+.boardCommon tr.typeNoti td.tbodyNum>span{height:auto;border-color:#2DAB40;color:#2DAB40;padding:0px 9px;border-radius:5px;}
+.typeIpsi .BBSlist.board_table thead th.headNum{width:120px;}
+.typeIpsi .BBSlist.board_table thead th.headFile{width:80px;}
+.typeIpsi .BBSlist.board_table th.headDate{width:120px;}
+.typeIpsi .BBSlist tr.typeNoti td.tbodyNum{height:auto;line-height:26px;}
+.typeIpsi .BBSlist td.tbodyNum>span{font-family:"Roboto", 'Noto Sans KR', sans-serif;}
+
+/* 입학자료 신청 */
+.board_admission >div ~ div{margin-top:50px;}
+.board_admission .board_table colgroup col:nth-child(1){width:120px;}
+.board_admission .formInput ~ .formInput{margin-top:10px;}
+.board_admission .admis_i,
+.board_admission .admis_i.a_tel .telNumber{width:400px;max-width:100%;}
+.board_admission .admis_i.a_tel .selectBase,
+.board_admission .admis_i.a_tel .inputBase{width:calc(35% - 21px);}
+.board_admission .admis_i.a_tel .selectBase .toggleBtn{width:100%;}
+
+/* 주소입력 */
+.addressSech > div{display:flex;flex-wrap:wrap;align-content:center;align-items:center;}
+.addressSech > div ~ div{margin-top:10px;}
+.addressSech .topA .inputBase{width:calc(100% - 130px);}
+.addressSech .topA .baseBtn{width:120px;height:40px;margin-left:10px;border-radius:5px;}
+.addressSech .topA .baseBtn .base{padding:11px 12px;border-radius:5px;}
+.addressSech .bottomA .addressI{width:400px;}
+.addressSech .bottomA .addressDtl{width:calc(100% - 410px);margin-left:10px;}
+
+
+/* 첨부파일 */
+.fileArea a span{color:#666;font-size:16px;line-height:20px;border-bottom:1px solid transparent;}
+.fileArea p~ p{margin-top:10px;}
+.fileArea a:hover span{color:#111;border-bottom-color:#111;}
+
+/* 확인번호 팝업 */
+.typeIpsi #pop_pwCheck .popLayout.popLayer{max-width:400px;}
+
+/* 게시판 상세 */
+.typeIpsi .BBSlist_v{border-bottom:none;}
+.typeIpsi .BBSlist_v .likeTitle{position: relative;overflow: hidden;border-bottom: 1px solid #d1d1d1;}    
+.typeIpsi .BBSlist_v dt .mark_categ{font-size:18px;color:#2DAB40;line-height: 20px;}
+.typeIpsi .BBSlist_v .headLine3{margin:7px 0 15px;}
+.typeIpsi .BBSlist_v .txtInfo {font-size:0;text-align:left;}
+.typeIpsi .BBSlist_v .txtInfo>span {display:inline-block;position:relative;vertical-align:middle;font-size:16px;line-height:1em;margin-right:9px;padding-right:9px;margin-bottom:5px;}
+.typeIpsi .BBSlist_v .txtInfo span{border:none;}
+.typeIpsi .BBSlist_v .txtInfo>span::before {content:'';display:block;position:absolute;right:0;top:3px;width:1px;height:14px;margin:0;box-sizing:border-box;background:#d1d1d1;}
+.typeIpsi .BBSlist_v .txtInfo>span:last-child {margin-right:0;padding-right:0;}
+.typeIpsi .BBSlist_v .txtInfo>span:last-child::before {display:none;}
+.typeIpsi .BBSlist_v .txtInfo>span>em{font-style:normal;display:inline-block;vertical-align:middle;}
+.typeIpsi .BBSlist_v .txtInfo>span>em.name{margin-right:3px;color:#111;}
+.typeIpsi .BBSlist_v .txtInfo>span>em.data{color:#666;}
+.typeIpsi .BBSlist_v .txtInfo + .txtInfo{margin-top:7px;}
+.typeIpsi .BBSlist_v dd{padding:40px 30px 100px;border-bottom:1px solid #d1d1d1;}
+.typeIpsi .BBSlist_v .view_txt .centerImg,
+.typeIpsi .BBSlist_v .centerImg {width:100%;text-align:center;}
+.typeIpsi .BBSlist_v .centerImg > img{margin:0 0 20px 0;}
+.typeIpsi .BBSlist_v .view_txt img{margin:20px 0;max-width:100%;}
+.typeIpsi .BBSlist_v .fileArea{background:#F1F2F7;}
+
+/* 공유하기 */
+.typeIpsi #dim.sharePop{z-index:1040;background:rgba(0,0,0,0.5);backdrop-filter: blur(2px);opacity:1;visibility:visible;}
+.typeIpsi .shareArea .shareBox{width:400px;border:1px solid #d1d1d1;border-radius:15px;left:50%;margin:0;transform:translate(-50%,-50%);padding:20px 20px 5px 20px;}
+.typeIpsi .shareArea .shareBox ul{margin-left:-15px;display:flex;flex-wrap:wrap;justify-content:start;}
+.typeIpsi .shareArea .shareBox ul li{width:calc(50% - 15px);padding:0 0 0 15px;float:none;}
+
+/* 댓글 */
+.typeIpsi .replyArea fieldset{border-color:#B0B0B0;}
+.typeIpsi .replyArea .list li .txtInfo .writer{font-weight:500;}
+
+/* 이전/다음글 */
+.prevNnext{margin-top:50px;}
+
+/* 썸네일 기본 */
+.typeIpsi .BBSgallery .infoArea .cag{display:block;vertical-align:middle;margin-bottom:5px;font-size:15px;color:#2DAB40;}
+.typeIpsi .BBSgallery .infoArea .noticeTitle>p{max-width:100%;font-size:22px;color:#111;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow: ellipsis;display:inline-block;vertical-align: middle;}
+.typeIpsi .BBSgallery .infoArea .noticeInfo>span{font-size:15px;margin-right:7px;padding-right:7px;color:#666;position:relative;}
+.typeIpsi .BBSgallery .infoArea .noticeInfo>span:not(:last-child)::before{content:"";position:absolute;width:1px;height:12px;background:#d1d1d1;right:0;top:2px;}
+.typeIpsi .ripple{font-size:22px;font-weight:600;line-height:20px;color:#2DAB40;font-style: normal;margin-left: 5px;display:inline-block;vertical-align: middle;}
+
+.typeIpsi .BBSgallery.Thumbnail:before{content:"";display:block;height:1px;background:#d1d1d1;position:absolute;left:20px;bottom:0;}
+.typeIpsi .BBSgallery.Thumbnail ul{display:flex;flex-wrap:wrap;margin:0 -20px -1px;width:calc(100% + 40px);}
+.typeIpsi .BBSgallery.Thumbnail li{border:none;float:none;height:auto;}
+.typeIpsi .BBSgallery.Thumbnail li:not(.typeNoArticle){border:none;width:calc(25% - 40px);padding:0;border-bottom:none;display:inline-block;margin:0 20px 50px 20px;}
+.typeIpsi .BBSgallery.Thumbnail .infoArea{width:100%;padding:0;}
+.typeIpsi .BBSgallery.Thumbnail li .ThumbnailArea{position:relative;width:100%;height:auto;background:#F1F1F1;margin-bottom:17px;overflow:hidden;display:inline-block;}
+.typeIpsi .BBSgallery.Thumbnail li .ThumbnailArea::after{content:"";padding-top:67.5%;display:block;width:100%;}
+.typeIpsi .BBSgallery.Thumbnail li .ThumbnailArea>img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:100%;height:100%;max-width:unset;}
+.typeIpsi .BBSgallery.Thumbnail li .ThumbnailArea>img.rowImg{width:100%;height:auto;}
+.typeIpsi .BBSgallery.Thumbnail .infoArea{padding:0;width:100%;}
+.typeIpsi .BBSgallery.Thumbnail .infoArea .noticeTitle{display:block;width:100%;font-size:0;}
+.typeIpsi .BBSgallery.Thumbnail .infoArea .noticeText{font-size:14px;margin-top:6px;}
+.typeIpsi .BBSgallery.Thumbnail .infoArea .noticeInfo{margin-top:12px;}
+.typeIpsi .BBSgallery.Thumbnail li .photo a{position:absolute;width:100%;height:100%;left:50%;top:50%;transform:translate(-50%,-50%);}
+.typeIpsi .BBSgallery.Thumbnail li .info_comment{width:100%;}
+
+/* 썸네일 목록 */
+.typeIpsi .BBSgallery.rowDtl li{min-height:auto;padding:30px 0;border-bottom-color:#d1d1d1;display:flex;flex-wrap:wrap;align-content:center;align-items:center;}
+.typeIpsi .BBSgallery.rowDtl li .photo{position:relative;left:0;top:0;width:240px;height:160px;margin-right:30px;}
+.typeIpsi .BBSgallery.rowDtl li .infoArea{width:calc(100% - 270px);position:relative;}
+.typeIpsi .BBSgallery.rowDtl li .photo a{display:block;width:100%;height:100%;}
+.typeIpsi .BBSgallery.rowDtl li .photo a img{width:100%;height:100%;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
+.typeIpsi .BBSgallery.rowDtl li .photo a.btn_play::before{z-index:1;}
+.typeIpsi .BBSgallery.rowDtl li .photo a.btn_play::after{z-index:2;}
+.typeIpsi .BBSgallery.rowDtl .infoArea .noticeText{margin:12px 0;color:#666;font-size:15px;line-height:24px;text-overflow: ellipsis;overflow: hidden;word-break: break-word; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.typeIpsi .BBSgallery.rowDtl li .info_comment{bottom:0;}
+
+/* 갤러리 상세(동영상) */
+.typeIpsi .BBSlist_v.BBSgallery .view_movie{display:flex;flex-wrap:wrap;height:480px;}
+.typeIpsi .BBSlist_v.BBSgallery .view_movie .movie{position: relative;overflow:hidden;display: inline-block;height:100%;width:calc(100% - 410px);vertical-align: middle;}
+.typeIpsi .BBSlist_v.BBSgallery .view_movie .movie a.btn_play{position:absolute;width:100%;height:100%;left:0;top:0;background-repeat:no-repeat;background-position:center center;background-size:cover;}
+.typeIpsi .BBSlist_v.BBSgallery .view_movie .movie iframe{width:100%;height:100%;}
+.typeIpsi .BBSlist_v.BBSgallery .view_movie .movie_caption{overflow:unset;height:auto;width:410px;height:100%;margin:0;background:#fff;border:1px solid #d1d1d1;border-left:none;}
+.typeIpsi .BBSlist_v.BBSgallery .view_movie .movie_caption strong{font-size:22px;font-weight:500;color:#111;margin:0 0 20px 0;display:block;}
+.typeIpsi .BBSlist_v.BBSgallery .view_movie .movie_caption .txt{font-size:15px;color:#111;font-weight:400;height:420px;}
+.typeIpsi .BBSlist_v.BBSgallery .view_movie .movie_caption .mCSB_container{margin-right:30px;}
+.typeIpsi .BBSlist_v.BBSgallery .view_movie .movie_caption .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background:#111;width:6px;}
+
+/* 링크게시판(썸네일) */
+.typeIpsi .BBSlist.photo_table  thead th.headPhoto{width:160px;}
+.typeIpsi .BBSlist.photo_table .photo{width:auto;height:auto;}
+.typeIpsi .BBSlist.photo_table .photo a{display:block;position:relative;width:100%;padding-bottom:67.5%;}
+.typeIpsi .BBSlist.photo_table .photo img{width:100%;height:100%;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);object-fit:cover;object-position:center top;}
+
+/* 링크게시판(목록상세) */
+.typeIpsi .BBSgallery.link_gallery .infoArea .noticeTitle{margin:0 0 10px 0;display:block;}
+
+/* FAQ */
+.AccordionBase>li .AccordionBtn{padding:21px 60px 20px 54px;}
+.AccordionBase>li .AccordionBtn>span{padding:0;display:inline-block;max-width:100%;}
+.AccordionBase>li .AccordionCont .AccordionFileArea>.ad_FileDown{padding-left:25px;background:url(../img/board/ico_doc.png) no-repeat 0 3px/ auto 16px;}
+.AccordionBase>li .AccordionCont .AccordionFileArea>.ad_FileDown>span{font-size:14px;}
+.AccordionBase>li .AccordionCont .AccordionFileArea>.ad_FileDown .btn_preview{display:inline-block;width: 75px;height: 20px;margin: 0 0 0 5px;padding: 0 0 0 18px;background: url(../img/board/ico_magnifyPlus.png) no-repeat 0 50%;color:#666;font-size: 13px;line-height:13px;vertical-align: middle;}
+.AccordionBase>li .AccordionBtn .ico_new{display:inline-block;overflow: hidden;width: 18px;height: 18px;margin: 5px 0 0 5px;background: url(../img/board/ico_cirNew.png) no-repeat left top;text-indent: -100px;vertical-align: top;}
+
+/* QnA */
+.BBSlist.qna_table thead th.headResult{width:120px;}
+
+/* 버튼 */
+.typeIpsi .btnArea a+a, 
+.typeIpsi .btnArea button+button{margin:0 5px !important;}
+
+/* QnA(쓰기) */
+.qna_write_table .admis_i{max-width:400px;}
+.qna_write_table .optionGrp .inputBox ~ .inputBox{margin-left:10px;}
+.qna_write_table .fildArea .formInput ~ .formInput{margin-top:12px;}
+
+/* 답글 첨부파일추가 */
+.typeIpsi .replyArea.replayFile  .fildArea{border:none;border-bottom:1px solid #d1d1d1;padding:10px;}
+.typeIpsi .replyArea.replayFile  .fildArea .formInput ~ .formInput{margin-top:12px;}
+.replayFile .fileArea{border-top:1px solid #d1d1d1;padding-top:15px;margin-top:15px;}
+.replayFile .fileArea p{padding: 0 0 0 25px;background: url(../img/board/ico_doc.png) no-repeat 0 3px;}
+.replayFile .fileArea p a{display: inline;overflow: hidden;text-overflow: ellipsis;max-width: calc(100% - 25px);color: #666;font-size: 15px;line-height: 20px;vertical-align: middle;}
+.replayFile .fileArea p .btn_preview{display: inline-block;width: 75px;height: 20px;margin: 0 0 0 5px;padding: 0 0 0 20px;background: url(../img/board/ico_magnifyPlus.png) no-repeat 0 50%;color: #666;font-size: 13px;line-height: 13px;vertical-align: middle;}
+
+/* 입찰정보 게시판 */
+.typeIpsi .BBSlist.tender_table  th.headState{width:120px;}
+
+/* 캠퍼스맵 */
+.typeIpsi #contents>article.campus_map_area,
+.typeIpsi #contents>article.campusMap{max-width:100%;padding:0;position:relative;}
+.typeIpsi .campus_map_area .tit_h1{max-width:1580px;padding:0 50px;margin:0 auto;}
+/* .typeIpsi .campusMap_inner{width:1480px;margin:0 auto;position:absolute;height:100%;left:50%;top:0;transform:translateX(-50%);z-index:10;} */
+.typeIpsi .campus_map_tab{background:url(../img/campusmap/bg_nav.png) repeat-y;margin-left:-740px;left:50%;top:0;height:100%;}
+.typeIpsi .campus_map_tab .tab a{background:url(../img/campusmap/ico1.png) no-repeat 17px center;}
+.typeIpsi .campus_map_tab .tab li:nth-child(2) a{background-image:url(../img/campusmap/ico2.png);}
+.typeIpsi .campus_map_tab .tab li:nth-child(3) a{background-image:url(../img/campusmap/ico3.png);}
+.typeIpsi .campus_map_tab .tab li:nth-child(4) a{background-image:url(../img/campusmap/ico2.png);}
+.typeIpsi .campus_map_tab .tab li a.on{background-color:#2DAB40;border-color:#2DAB40}
+.typeIpsi .campus_map_tab>div{background:rgba(45,171,64,0.9);}
+.typeIpsi .campus_map_tab>div button.on:after{background:url(../img/campusmap/bg_arrow2.png);}
+.typeIpsi .pop_campus:after{background:url(../img/campusmap/bg_arrow.png) no-repeat center;}
+.typeIpsi .pop_campus li{background:url(../img/campusmap/ico5.png) no-repeat 0 1px;}
+.typeIpsi .pop_campus li:nth-child(2){background-image:url(../img/campusmap/ico6.png);}
+.typeIpsi .pop_campus button{background:url(../img/campusmap/btn_close.png) no-repeat center;}
+.typeIpsi .pop_campus a{background:#2DAB40;border-radius:35px;}
+.typeIpsi .pop_campus a:after{display:none;}
+
+/* 모집일정 */
+.typeIpsi .month_top>span{color:inherit;}
+.typeIpsi .cal_group{display:flex;flex-wrap:wrap;}
+.typeIpsi .calendar,
+.typeIpsi .bachelor_month .calList_con{float:none;}
+.typeIpsi .calendar{background-image:none;}
+.typeIpsi .bachelor_month .calList_con{width:calc(100% - 325px);}
+.typeIpsi .calendar_area .txtAlert{margin-top:10px;}
+.typeIpsi .cal_group .lineTop_tbArea{position:unset;}
+.typeIpsi .month_top a.btn_today{display:flex;flex-wrap:wrap;justify-content:center;align-content:center;}
+.typeIpsi .month_top a.btn_today span{color:#fff;}
+.typeIpsi .month_top a.btn_today:hover span,
+.typeIpsi .month_top a.btn_today:active span{color:#2DAB40;}
+
+/* 전년도 입시결과 */
+.typeIpsi .contTable.ipsi_table3 .tableBr,
+.typeIpsi .contTable.ipsi_table7 .tableBr{display:none;}
+
+/* 전공심화과정안내 */
+.jongong_info .division:first-child{margin-bottom:62px;}
+.jongong_info .box_icon{padding:39px 30px 40px 148px;background-position:left 38px center;}
+.jongong_info .jongong_study .tit_h3{margin-bottom:16px;}
+.jongong_info .jongong_study .tit_h3:nth-of-type(2n+1){margin-top:23px;}
+.jongong_info .division.jongong_taking{margin-top:58px;}
+.jongong_taking .taking_inner,
+.jongong_taking .taking_inner> div,
+.jongong_taking .taking_inner> div .jongong_bx{display:flex;flex-wrap:wrap;}
+.jongong_taking .taking_inner> div{align-content:center;align-items:center;}
+.jongong_taking .taking_inner> div .jongong_bx{width:180px;height:181px;text-align:center;justify-content:center;align-content:center;align-items:center;border-radius:50%;background:#F1F2F7;}
+.jongong_taking .taking_inner> div .jongong_bx .tit_h4{margin:0;line-height:20px;font-weight:400;}
+.jongong_taking .taking_inner> div:nth-child(1){order:1;}
+.jongong_taking .taking_inner> div:nth-child(2){order:3;}
+.jongong_taking .taking_inner> div:nth-child(3){order:2;}
+.jongong_taking .taking_inner> div.jongong4{padding:0 80px;position:relative;}
+.jongong_taking .taking_inner> div.jongong4:before{content:"";position:absolute;width:100%;height:1px;left:0;top:50%;transform:translateY(-50%);z-index:-1;border-top:1px dashed #D1D1D1;}
+.jongong_taking .taking_inner> div.jongong4 .jongong_bx{background:#2DAB40;}
+.jongong_taking .taking_inner> div.jongong4 .jongong_bx .tit_h4{font-size:20px;font-weight:500;line-height:30px;color:#fff;}
+.jongong_taking .taking_inner> div .plus{display:inline-block;width:30px;height:30px;margin:0 25px;position:relative;}
+.jongong_taking .taking_inner> div .plus:before,
+.jongong_taking .taking_inner> div .plus:after{content:"";position:absolute;background:#D1D1D1;}
+.jongong_taking .taking_inner> div .plus:before{width:4px;height:100%;left:50%;top:0;transform:translateX(-50%);}
+.jongong_taking .taking_inner> div .plus:after{width:100%;height:4px;left:0;top:50%;transform:translateY(-50%);}
+
+/* 편입학안내 */
+.pyeonib_info .division:first-child .tit_h2{font-family:'Noto Sans KR', sans-serif;margin:28px 0 25px 0;} 
+.pyeonib_info .pyeonib_qualification table tbody td.txtL{padding:17px 10px 15px 26px !important;}
+.pyeonib_info .pyeonib_qualification table tbody tr:last-child td.txtL{padding:18px 10px 11px 26px !important;}
+.pyeonib_info .pyeonib_qualification table tbody .txtList{margin-top:4px;}
+.pyeonib_info .pyeonib_qualification table tbody .txtAlert{margin-top:9px;}
+.pyeonib_info .pyeonib_qualification ~ .txtList{margin-top:15px;}
+
+/* 대학안내 */
+.universityCont{margin:34px 0 0 -1px;}
+.universityCont > div.university_bx{padding:75px 0;display:flex;flex-wrap:wrap;align-content:center;align-items:center;}
+.universityCont > div.university_bx:first-child{padding:0 0 75px;}
+.universityCont > div.university_bx:last-child{padding:75px 0 0;}
+.universityCont > div.university_bx > div{width:calc(50% - 15.5px);}
+.universityCont > div.university_bx:nth-child(odd) > div:nth-child(1){order:1;margin-right:31px;}
+.universityCont > div.university_bx:nth-child(odd) > div:nth-child(2){order:2;padding:18px 0 0 65px;}
+.universityCont > div.university_bx:nth-child(even) > div:nth-child(1){order:2;margin-left:31px;}
+.universityCont > div.university_bx:nth-child(even) > div:nth-child(2){order:1;padding:18px 65px 0 0;}
+.universityCont > div.university_bx:first-child > div:nth-child(2){padding:17px 0 0 65px;}
+.universityCont > div.university_bx:last-child > div:nth-child(2){padding:26px 0 0 65px;}
+.universityCont > div.university_bx .img_bx{height:374px;background-repeat:no-repeat;background-size:cover;background-position:center center;border-radius:20px;}
+.universityCont > div.university_bx .txt_bx{margin-top:-1px;}
+.universityCont > div.university_bx .txt_bx h3{font-size:50px;font-weight:bold;line-height:72px;color:#000;margin-bottom:15px;}
+.universityCont > div.university_bx .txt_bx p{font-size:18px;font-weight:400;line-height:26px;color:#000;word-break:keep-all;}
+.universityCont > div.university_bx:nth-child(2) > div:nth-child(2) h3,
+.universityCont > div.university_bx:nth-child(2) > div:nth-child(2) p{padding-left:6px;}
+.universityCont > div.university_bx .txt_bx ul{display:flex;flex-wrap:wrap;margin-top:53px;}
+.universityCont > div.university_bx .txt_bx ul li{margin:0 10px 12px 0;}
+.universityCont > div.university_bx .txt_bx .btnArrow{padding:17px 44px 13px 29px;line-height:1;position:relative;}
+.universityCont > div.university_bx .txt_bx .btnArrow:after{content:"";position:absolute;width:8px;height:14px;top:52%;right:21px;transform:translateY(-50%);transition:all 0.2s;background:url(../../IPSI_A/img/type2/ico_btnArrow.svg) no-repeat center center;}
+.universityCont > div.university_bx .txt_bx .btnArrow span{font-size:16px;font-weight:400;line-height:16px;color:#183B3F;}
+.universityCont > div.university_bx .txt_bx .btnArrow:hover:after{background-image:url(../../IPSI_A/img/type2/ico_btnArrow_on.svg);}
+.universityCont > div.university_bx .txt_bx .btnArrow:hover span{color:#fff;}
+.universityCont > div.university_bx .txt_bx .btnArrow[target="_blank"]{padding:17px 50px 13px 29px;}
+.universityCont > div.university_bx .txt_bx .btnArrow[target="_blank"]:after{background-image:url(../../IPSI_A/img/layout/ico_btnBlank.svg);width:13px;height:14px;right:23px;}
+.universityCont > div.university_bx .txt_bx .btnArrow[target="_blank"]:hover:after{background-image:url(../../IPSI_A/img/layout/ico_btnBlank_on.svg);}
+
+/* 장학금대상 */
+.scholarshipTarget .tit_h2{margin:60px 0 24px;display:block;}
+.scholarshipTarget .listTable{border-top:2px solid #000;margin-top:22px;display:flex;flex-wrap:wrap;}
+.scholarshipTarget .listTable .half:first-child{width:calc(50% - 9px);}
+.scholarshipTarget .listTable .half:last-child{width:calc(50% + 9px);}
+.scholarshipTarget .listTable .txtList li{border-bottom:1px solid #D1D1D1;padding:21px 20px 18px 71px;}
+.scholarshipTarget .listTable .txtList li:before{left:26px;top:20px;font-weight:600;color:#2DAB40;font-size:18px;}
+.scholarshipTarget .listTable .txtList li ~ li{margin-top:0 !important;}
+
+/* 240816 추가 */
+.scholarshipTarget .iconEtcArea{padding:35px 20px !important;margin-top:22px;}
+.scholarshipTarget .iconEtcArea .txtList{display:flex;flex-wrap:Wrap;align-items:start;}
+.scholarshipTarget .iconEtcArea .txtList > li{margin:0 20px;}
+.scholarshipTarget .iconEtcArea .txtList.half > li{width:calc(50% - 40px);}
+.scholarshipTarget .iconEtcArea .txtList.half > li:nth-child(n+3){margin-top:4px;}
+.scholarshipTarget .iconEtcArea .txtList.three > li{width:calc(33.33% - 40px);}
+.scholarshipTarget .iconEtcArea .txtList.three > li:nth-child(n+4){margin-top:4px;}
+/* //240816 추가 */
+
+/* 교내장학금 */
+.scholarshipCont .headLine1{margin-bottom:28px;line-height:49px;}
+.scholarshipCont .headLine2{line-height:26px;}
+.scholarshipCont .txtBody1,
+.scholarshipCont .txtList{margin-top:13px;}
+.scholarshipCont table tbody td > ul{margin-top:3px;}
+.typeIpsi .scholarshipCont .division+ .division{margin-top:45px;}
+
+/* 교외장학금 */
+.scholarshipTarget .listTable.offCampusTable{margin-bottom:62px;}
+.scholarshipTarget .listTable.offCampusTable .half:nth-child(1){width:calc(33.33% - 14px);}
+.scholarshipTarget .listTable.offCampusTable .half:nth-child(2){width:calc(33.33% + 10px);}
+.scholarshipTarget .listTable.offCampusTable .half:last-child{width:calc(33.33% + 4px);}
+
+/* 정부보증 학자금융자 대출 */
+.scholarshipLoan .tit_h2{margin-top:60px;}
+.scholarshipLoan .tit_h3{margin:23px 0 16px;}
+
+/* 글로벌프로그램 */
+.typeIpsi .globalCommon .lineTop_tbArea table .txtList{margin-top:0;}
+.globalCommon .txtAlert ~ .txtList{padding-left:24px;}
+.globalCommon .txtAlert ~ .txtList li,
+.globalCommon .txtAppendix{font-size:14px;line-height:24px;color:#666;}
+.globalCommon .txtAlert ~ .txtList li::before{top:9px;}
+.typeIpsi .globalCommon .txtAppendix{display:flex;flex-wrap:wrap;justify-content:center;align-items:top;}
+.typeIpsi .globalCommon .txtAppendix .mark_appendix{height:21px;margin:0 5px 0 0;background-position:center top 4px;}
+
+/* 학생SGLT */
+.typeIpsi .lineTop_tbArea.sglt_table td{word-break:keep-all;}
+
+/* 세계로장학금 */
+.typeIpsi .lineTop_tbArea.scholarship_table td{word-break:keep-all;}
+.typeIpsi .lineTop_tbArea.scholarship_table br{display:none;}
+
+/* 취업안내 */
+.employmentInfo .employment_title{border-top:1px solid #DCDCDC;padding-top:77px;text-align:center;}
+.employmentInfo .employment_title h2{font-family: "Poppins", sans-serif;font-size:68px;font-weight:500;line-height:100px;color:#111;text-transform:uppercase;}
+.employmentInfo .employment_title .tit_h3{margin:9px 0 17px;}
+.employmentInfo .employment_row{margin:87px -36px 0 -36px;display:flex;flex-wrap:wrap;}
+.employmentInfo .employment_row> div{padding:0 36px;width:50%;}
+.employmentInfo .employment_row> div:nth-child(1),
+.employmentInfo .employment_row> div:nth-child(2){margin-bottom:97px;}
+.employmentInfo .employment_row .img_bx{position:relative;width:100%;height:280px;border-radius:20px;overflow:hidden;background-repeat:no-repeat;background-size:cover;background-position:center top;}
+.employmentInfo .employment_row .txt_bx{margin-top:27px;}
+.employmentInfo .employment_row> div:nth-child(3) .txt_bx,
+.employmentInfo .employment_row> div:nth-child(4) .txt_bx{margin-top:29px;}
+.employmentInfo .employment_row .txt_bx h5{font-size:18px;line-height:32px;color:#000;font-weight:600;margin-bottom:9px;}
+.employmentInfo .employment_row .txt_bx .tit_h2{font-size:30px;line-height:32px;margin:0 0 29px 0;}
+.employmentInfo .employment_row .txt_bx .txtAlert{margin-top:13px;}
+
+/* 찾아오시는 길 */
+.locationMap{margin-top:58px;}
+.locationMap .map_bx .map_inner{border-radius:10px 10px 0 0;overflow:hidden;border:1px solid #D1D1D1;border-bottom:none;}
+.locationMap .map_bx .map_inner .kakaomap{width:100%;}
+.locationMap .map_bx .map_inner .map_border,
+.locationMap .map_bx .map_inner .hide{display:none;}
+.locationMap .map_bx .map_info{border:1px solid #D1D1D1;border-radius:0 0 10px 10px;display:flex;flex-wrap:wrap;padding:36px 0 38px;}
+.locationMap .map_bx .map_info li{padding:0 40px;width:50%;position:relative;}
+.locationMap .map_bx .map_info .tit_h3{font-size:21px;margin:0 0 10px 0;}
+.locationMap .map_bx .map_info li:not(:first-child):before{content:"";position:absolute;width:1px;height:calc(100% - 4px);background:#D1D1D1;left:0;top:50%;transform:translateY(-50%);}
+
+/* 교통안내 */
+.locationInfo{margin-top:59px;}
+.locationInfo .location_way .way_bx .tit_h3{margin:0 0 16px;}
+.locationInfo .location_way .way_bx:not(:last-child){margin-bottom:23px;}
+
+/* 스쿨버스시간표 */
+.locationSchoolbus{word-break: keep-all;}
+.typeIpsi .locationSchoolbus .division+.division{margin-top:57px;}
+
+/* 이용안내 */
+.utilCommon{word-break: keep-all;margin-top:59px;}
+.utilCommon .tit_h3 ~ .txtList{margin-top:16px;}
+
+/* 개인정보처리방침 */
+.utilPrivacy .util_bx ~ .util_bx{margin-top:24px;}
+.utilPrivacy .util_bx .tit_h3 ~ .txtBody1,
+.utilPrivacy .util_bx .tit_h3 ~ .contTable{margin-top:15px;}
+.utilPrivacy .txtBody1 ~ .baseBtn{margin-top:22px;}
+.utilPrivacy .txtBody1 ~ .txtList{margin-top:12px;}
+.utilPrivacy .alertList ~ .baseBtn{margin-top:4px;}
+.typeIpsi .utilPrivacy .division+.division{margin-top:62px;}
+.utilPrivacy .baseBtn{position:relative;}
+.utilPrivacy .baseBtn>.base{padding:9px 45px 8px 29px;}
+.utilPrivacy .baseBtn:after{content: "";position: absolute;width:8px;height:14px;top:50%;right:24px;transform: translateY(-50%);background:url(../../IPSI_A/img/type2/ico_btnArrow.svg) no-repeat center center;}
+.utilPrivacy .baseBtn:hover:after{background-image:url(../../IPSI_A/img/type2/ico_btnArrow_on.svg);}
+.utilPrivacy .util_bx .tit_h3{margin-top:0;}
+.utilPrivacy .util_bx:first-of-type{margin-top:23px;}
+.utilPrivacy #privacy1 .util_bx ~ .util_bx{margin-top:26px;}
+.utilPrivacy #privacy6 .util_bx:first-of-type{margin-top:12px;}
+.utilPrivacy #privacy6 .util_bx:nth-of-type(2) >.txtList{margin-top:18px;}
+.utilPrivacy #privacy6 .util_bx:nth-of-type(4) >.txtList{margin-top:7px;}
+.utilPrivacy #privacy6 .util_bx .tit_h4{margin:7px 0 2px;}
+.utilPrivacy #privacy7 .util_bx:first-of-type,
+.utilPrivacy #privacy8 .util_bx:first-of-type,
+.utilPrivacy #privacy9 .util_bx:first-of-type,
+.utilPrivacy #privacy11 .util_bx:first-of-type{margin-top:12px;}
+.utilPrivacy #privacy10 .privacy_team{margin-top:22px;}
+.utilPrivacy #privacy10 .txtAlert{margin-top:16px;padding-left:28px;background-position:left 4px top;}
+.utilPrivacy #privacy10 .txtAlert ~ .util_bx{margin-top:24px;}
+.utilPrivacy #privacy10 .util_bx ~ .util_bx{margin-top:26px;}
+.utilPrivacy #privacy10 img{display:block;margin-top:15px;}
+.utilPrivacy #privacy10 .util_bx:last-child p{margin:26px 0 22px;}
+.utilPrivacy #privacy11 .txtAlert{margin-top:12px;}
+
+/* 대학자체평가 안내 */
+.utilEvaluation .txtAlert{margin:13px 0 33px;} 
+.utilEvaluation .btnList{display:flex;flex-wrap:wrap;margin-top:-10px;}
+.utilEvaluation .btnList li{margin:0 10px 10px 0;}
+.utilEvaluation .btnList .baseBtn{position:relative;height:auto;}
+.utilEvaluation .btnList .baseBtn:after{content:"";position:absolute;width:14px;height:18px;right:25px;top:calc(50% + 1px);transform:translateY(-50%);background:url(../../IPSI_A/img/layout/ico_btnDown.svg) no-repeat;}
+.utilEvaluation .btnList .baseBtn>.base{padding:15px 53px 13px 29px;}
+.utilEvaluation .btnList .baseBtn:hover:after{background-image:url(../../IPSI_A/img/layout/ico_btnDown_on.svg);}
+
+/* 학과안내 */
+.deptCommon{margin-top:38px;}
+.deptCommon .deptBg,
+.deptCommon .img_bx{background-repeat:no-repeat;background-size:cover;background-position:center top;}
+.deptCommon .img_bx{border-radius:20px;overflow:hidden;}
+.deptCommon h3{font-size:30px;line-height:44px;font-weight:600;color:#000;margin:0 0 11px;}
+.deptCommon h4{font-size:18px;line-height:26px;font-weight:500;margin:0 0 24px;}
+.deptCommon .btnList{display:flex;margin:27px 0 0;}
+.deptCommon .btnList li:not(:last-child){margin:0 10px 0 0;}
+.deptCommon .btnList .baseBtn{position:relative;height:auto;}
+.deptCommon .btnList .baseBtn>.base{padding:15px 52px 13px 29px;}
+.deptCommon .btnList .baseBtn:after{content:"";position:absolute;right:24px;top:calc(50% + 1px);transform:translateY(-50%);background-repeat:no-repeat;}
+.deptCommon .btnList .baseBtn.siteBtn:after{width:14px;height:16px;background-image:url(../../IPSI_A/img/layout/ico_btnBlank.svg);}
+.deptCommon .btnList .baseBtn.siteBtn:hover:after{background-image:url(../../IPSI_A/img/layout/ico_btnBlank_on.svg);}
+.deptCommon .btnList .baseBtn.downBtn>.base{padding:15px 54px 13px 29px;}
+.deptCommon .btnList .baseBtn.downBtn:after{width:14px;height:18px;background-image:url(../../IPSI_A/img/layout/ico_btnDown.svg);right:25px;}
+.deptCommon .btnList .baseBtn.downBtn:hover:after{background-image:url(../../IPSI_A/img/layout/ico_btnDown_on.svg);}
+.deptVisual{position:relative;margin-bottom:80px;border-radius:30px;overflow:hidden;}
+.deptVisual .deptBg{height:360px;}
+.deptVisual .deptTxt{position:absolute;width:100%;height:100%;left:0;top:0;padding:78px 60px;text-align:center;}
+.deptVisual .deptTxt h2{font-family: "Poppins", sans-serif;font-size:58px;font-weight:500;line-height:81px;color:#fff;margin:0 0 22px;}
+.deptVisual .deptTxt h3{font-size:24px;font-weight:500;line-height:35px;color:#fff;margin:0 0 17px;}
+.deptVisual .deptTxt p{font-size:15px;color:rgba(255,255,255,0.8);font-weight:300;line-height:26px;}
+.deptCard{margin:0 -36px;display:flex;flex-wrap:wrap;}
+.deptCard .deptItems{padding:0 36px;width:50%;}
+.deptCard .img_bx{height:360px;margin:0 0 33px;}
+.deptCard .txt_bx h4{color:#468378;}
+.deptCard .deptItems:nth-child(n+3){margin-top:80px;}
+.deptDesign .deptTxt h2 br,
+.deptLife .deptTxt h2 br,
+.deptMedia .deptTxt h2 br,
+.deptBusiness .deptTxt h2 br{display:none;}
+.deptRow .deptItems{display:flex;flex-wrap:wrap;}
+.deptRow .deptItems:not(:last-child){margin-bottom:80px;}
+.deptRow .deptItems> div{width:calc(50% - 36px);}
+.deptRow .deptItems:nth-child(odd) > div:nth-child(1){order:1;margin-right:36px;}
+.deptRow .deptItems:nth-child(odd) > div:nth-child(2){order:2;padding:84px 0 80px 36px;}
+.deptRow .deptItems:nth-child(even) > div:nth-child(1){order:2;margin-left:36px;}
+.deptRow .deptItems:nth-child(even) > div:nth-child(2){order:1;padding:84px 36px 80px 0;}
+.deptRow .txt_bx h4{color:#2DAB40;}
+
+
+
+
+
+
+
+
+/* responsive */
+@media all and (max-width:1580px){
+    /* 캠퍼스맵 */
+    .typeIpsi .campus_map_tab{margin-left:0;left:50px;}
+
+    /* 편입학안내 */
+    .pyeonib_info p{word-break: keep-all;}
+    .pyeonib_info p>br{display:none;}
+
+    /* 해외어학연수 */
+    .training_table table colgroup col:nth-child(1){width:120px !important;}
+    .training_table table colgroup col:not(:nth-child(1)){width:calc(20% - 120px) !important;}
+
+    /* 취업안내 */
+    .employmentInfo .txt_bx{word-break:keep-all;}
+    .employmentInfo .txt_bx br{display:none;}
+
+    /* 학과안내 */
+    .deptCommon{word-break:keep-all;}
+    .deptCard br{display:none;}
+}
+
+@media all and (max-width:1440px){
+    /* 썸네일 기본 */
+    .typeIpsi .BBSgallery.Thumbnail:before{left:10px;}
+    .typeIpsi .BBSgallery.Thumbnail ul{margin:0 -10px -1px;width:calc(100% + 20px);}
+    .typeIpsi .BBSgallery.Thumbnail li:not(.typeNoArticle){width:calc(25% - 20px);margin:0 10px 50px 10px;}
+
+    /* 전공심화과정안내 */
+    .jongong_taking .taking_inner> div.jongong4{padding:0 60px;}
+    
+    /* 교내장학금 */
+    .onCampus_table colgroup col:nth-child(1),
+    .onCampus_table colgroup col:nth-child(2){width:140px !important;}
+    .onCampus_table colgroup col:nth-child(3){width:65px !important;}
+    .onCampus_table colgroup col:nth-child(4){width:calc(100% - 705px) !important;}
+    .onCampus_table colgroup col:nth-child(5),
+    .onCampus_table colgroup col:nth-child(6),
+    .onCampus_table colgroup col:nth-child(7){width:120px !important;}
+    .onCampus_table br{display:none;}
+    .typeIpsi .lineTop_tbArea.onCampus_table td{word-break: keep-all;}
+
+    /* 해외인턴십 */
+    .internship_table table colgroup col:nth-child(1){width:140px !important;}
+    .internship_table table colgroup col:nth-child(2),
+    .internship_table table colgroup col:nth-child(3){width:calc( 50% - 660px) !important;}
+    .internship_table table colgroup col:nth-child(4),
+    .internship_table table colgroup col:nth-child(5){width:260px !important;}
+}
+
+@media all and (max-width:1280px){
+    /* tab */
+    .tabWrap{padding:0 26px;}
+    .tabWrap .pageTabBase{padding:0;}
+
+    /* 캠퍼스맵 */
+    .typeIpsi .campus_map_tab{left:26px;}
+
+    /* 전년도입시결과 */    
+    .typeIpsi .lineTop_tbArea.ipsi_table table{width:1240px;}
+
+    /* 전공심화과정안내 */
+    .jongong_taking .taking_inner> div .jongong_bx{width:150px;height:151px;}
+    .jongong_taking .taking_inner> div .plus{margin:0 15px;}
+    .jongong_taking .taking_inner> div.jongong4{padding:0 50px;}
+
+    /* 대학안내 */
+    .universityCont > div.university_bx{padding:50px 0;}
+    .universityCont > div.university_bx:first-child{padding:0 0 50px;}
+    .universityCont > div.university_bx:last-child{padding:50px 0 0;}
+    .universityCont > div.university_bx > div{width:calc(50% - 10px);}
+    .universityCont > div.university_bx:nth-child(odd) > div:nth-child(1){margin-right:20px;}
+    .universityCont > div.university_bx:nth-child(even) > div:nth-child(1){margin-left:20px;}
+    .universityCont > div.university_bx:nth-child(odd) > div:nth-child(2){padding:12px 0 0 45px;}
+    .universityCont > div.university_bx:nth-child(even) > div:nth-child(2){padding:12px 45px 0 0;}
+    .universityCont > div.university_bx:first-child > div:nth-child(2){padding:11px 0 0 45px;}
+    .universityCont > div.university_bx:last-child > div:nth-child(2){padding:17px 0 0 45px;}
+
+    /* 교외장학금 */
+    .scholarshipTarget .listTable.offCampusTable .half:nth-child(1),
+    .scholarshipTarget .listTable.offCampusTable .half:nth-child(2),
+    .scholarshipTarget .listTable.offCampusTable .half:last-child{width:100%;}
+
+    /* 해외인턴십 */
+    .internship_table table colgroup col:nth-child(1){width:130px !important;}
+    .internship_table table colgroup col:nth-child(2),
+    .internship_table table colgroup col:nth-child(3){width:calc( 50% - 570px) !important;}
+    .internship_table table colgroup col:nth-child(4),
+    .internship_table table colgroup col:nth-child(5){width:220px !important;}
+
+    /* 해외어학연수 */
+    .typeIpsi .lineTop_tbArea.training_table table{width:1280px;}
+    .training_table table colgroup col:nth-child(1){width:130px !important;}
+    .training_table table colgroup col:not(:nth-child(1)){width:calc(20% - 130px) !important;}
+
+    /* 취업안내 */
+    .employmentInfo .employment_row{margin:87px -20px 0 -20px;}
+    .employmentInfo .employment_row> div{padding:0 20px;}
+
+    /* 학과안내 */
+    .deptVisual .deptTxt{padding:78px 20px;}
+    .deptCard{margin:0 -20px;}
+    .deptCard .deptItems{padding:0 20px;}
+    .deptRow .deptItems> div{width:calc(50% - 20px);}
+    .deptRow .deptItems:nth-child(odd) > div:nth-child(1){margin-right:20px;}
+    .deptRow .deptItems:nth-child(odd) > div:nth-child(2){padding:84px 0 70px 20px;}
+    .deptRow .deptItems:nth-child(even) > div:nth-child(1){margin-left:20px;}
+    .deptRow .deptItems:nth-child(even) > div:nth-child(2){padding:84px 20px 70px 0;}
+    .deptCommon .deptRow .btnList{display:block;}
+    .deptCommon .deptRow .btnList li{display:inline-block;margin:0 10px 10px 0!important;}
+
+    /* 입학자료 신청 */
+    .board_admission .admission_table,.board_admission .admission_table tbody,
+    .board_admission .admission_table tr,.board_admission .admission_table th, .board_admission .admission_table td{display:block;width:100%;box-sizing:border-box;height:auto;}
+    .board_admission .admission_table colgroup col{display:none;}
+    .board_admission .admission_table th, .board_admission .admission_table td,
+    .board_admission .admission_table td.txtL{background:transparent;border:none;text-align:left;}
+    .board_admission .admission_table tr{padding:13px 13px 0 13px !important;}
+    .board_admission .admission_table th{margin-bottom:5px;padding:0 !important;}
+    .board_admission .admission_table td,
+    .board_admission .admission_table td.txtL{border:none !important;border-bottom:1px solid #D1D1D1 !important;padding:0 0 13px 0 !important;}
+    .board_admission .admission_table td ~ th{margin-top:15px;}
+}
+
+@media all and (max-width:1040px){
+    /* text */
+    .formApplyResult .box_bg .headLine3{line-height:32px;}
+
+    /*사이트맵*/
+    #sitemap_gnb>li>a{font-size:24px;width:200px;line-height:32px;}
+    #sitemap_gnb>li>.menuM{width:calc(100% - 200px);margin-top:5px;}
+    #sitemap_gnb>li:nth-of-type(n+2){padding-top:30px;}
+    #sitemap_gnb>li{padding-bottom:30px;}
+
+
+    
+
+    /* 게시판 공통 */
+    .boardCommon .board_table{display:block;width:100%;}
+    .boardCommon .board_table thead{display:none;}
+    .boardCommon .board_table tbody,.boardCommon .board_table tr,.boardCommon .board_table th,.boardCommon .board_table td{display:block;}
+    .boardCommon .board_table th,.boardCommon .board_table td{padding:0;}
+    .boardCommon .board_table tr{border-bottom:1px solid #D1D1D1;padding:12px 15px;text-align:left;display:flex;flex-wrap:wrap;}
+    .boardCommon .board_table td{border-bottom:none;text-align:left;height:auto;}
+    .boardCommon .board_table td:before{content:attr(data-cell-header);font-family:"Roboto", 'Noto Sans KR', sans-serif;}
+    .boardCommon .board_table a{font-size:18px;font-weight:500;}
+    .boardCommon .board_table .tbodyNum,.boardCommon .board_table .tbodyWriter{width:100%;}
+    .boardCommon .board_table .tbodyDept span,.boardCommon .board_table .tbodyApply span,
+    .boardCommon .board_table .tbodyDate span,.boardCommon .board_table .tbodyState span,.boardCommon .board_table td:before{font-size:15px;line-height:18px;color:#666;}
+    .boardCommon .answer{color:#2DAB40;margin-left:5px;}
+    .boardCommon .pagination{box-sizing:content-box;text-align:center;vertical-align:middle;}
+    .boardCommon .pagination a,.boardCommon .pagination>a>span{width:36px;height:36px;}
+    .boardCommon .board_table .tbodyDept,.boardCommon .board_table .tbodyApply,.boardCommon .board_table .tbodyDate{margin-right:15px;}
+    .boardCommon .board_table tr .typeNoArticle{width:100%;}
+    .boardCommon .board_table .tbodyTitle{margin:0 0 12px;width:100%;}
+    .boardCommon .board_table .tbodyNum:before,.boardCommon .board_table .tbodyTitle:before,.boardCommon .board_table .tbodyFile:before{display:none;}
+    
+    /* 모집안내 */
+    .board_admission .board_table colgroup col:nth-child(1){width:auto;}
+    .applyTable .a_tel .selectBase>.toggleBtn>.base{padding:12px 40px 12px 16px;}
+
+    /* 입학자료 신청 */    
+    .applyTable .a_name .inputBase{width:315px;}
+    .applyTable .a_tel .inputBase,.applyTable .a_tel .selectBase,.applyTable .a_tel .selectBase .toggleBtn{width:90px;}
+    .applyTable .selectBase>.toggleBtn>.base{padding:12px 40px 11px 16px;}
+    .board_admission .admis_i,.addressSech .bottomA .addressI{width:300px;}
+    .addressSech .bottomA .addressDtl{width:calc(100% - 310px);}
+    .board_admission .admis_i.a_tel .telNumber{width:310px;}
+
+    /* 신청완료 */
+    .formApplyResult .box_bg .tit_h2{font-size:27px;line-height:34px;min-height:auto;}
+    .formApplyResult .box_bg .txtBody1{font-size:16px;line-height:24px;}
+    .formApplyResult .box_bg .baseBtn>.base{font-size:16px;padding:15px 24px 13px 24px;}
+    
+    /* 확인번호 팝업 */
+    .typeIpsi #pop_pwCheck .popLayout.popLayer{max-width:400px !important;}
+
+    /* 썸네일 기본 */
+    .typeIpsi .BBSgallery.Thumbnail:before{left:10px;}
+    .typeIpsi .BBSgallery.Thumbnail ul{margin:0 -10px -1px;width:calc(100% + 20px);}
+    .typeIpsi .BBSgallery.Thumbnail li:not(.typeNoArticle){width:calc(50% - 20px);margin:0 10px 40px 10px;}
+    .typeIpsi .BBSgallery .infoArea .noticeTitle>p,.typeIpsi .ripple{font-size:20px;}
+    .typeIpsi .BBSgallery.Thumbnail li .ThumbnailArea{margin-bottom:7px;}
+    .typeIpsi .BBSgallery.Thumbnail .infoArea .noticeInfo{margin-top:5px;}
+    .typeIpsi .BBSgallery .infoArea .noticeInfo>span,.BBSgallery li .info_comment{font-size:14px;}
+
+    .typeIpsi .BBSgallery.rowDtl .infoArea .noticeText{margin:7px 0;}
+
+    /* 갤러리 상세(동영상) */
+    .typeIpsi .BBSlist_v.BBSgallery .view_movie{height:auto;}
+    .typeIpsi .BBSlist_v.BBSgallery .view_movie .movie{height:400px;width:100%;}
+    .typeIpsi .BBSlist_v.BBSgallery .view_movie .movie_caption{width:100%;height:auto;border:1px solid #d1d1d1;border-top:none;}
+    .typeIpsi .BBSlist_v.BBSgallery .view_movie .movie_caption strong{font-size:18px;}
+    .typeIpsi .BBSlist_v.BBSgallery .view_movie .movie_caption .txt{font-size:14px;height:160px;}
+
+    /* 일반게시판 */
+    .boardCommon .default_table .tbodyWriter{width:auto;}
+    .boardCommon .BBSlist.default_table .writer{color:#666;font-size:15px;}
+    .boardCommon .default_table .tbodyNum{order:1;}
+    .boardCommon .default_table .tbodyTitle{order:2;}
+    .boardCommon .default_table .tbodyFile{order:6;} 
+    .boardCommon .default_table .tbodyWriter{order:3;} 
+    .boardCommon .default_table .tbodyDate{order:4;} 
+    .boardCommon .default_table .tbodyView{order:5;}
+    .boardCommon .default_table .tbodyWriter,
+    .boardCommon .default_table .tbodyDate,
+    .boardCommon .default_table .tbodyView{position:relative;padding-right:10px;margin-right:10px;}
+    .boardCommon .default_table .tbodyWriter:after,
+    .boardCommon .default_table .tbodyDate:after,
+    .boardCommon .default_table .tbodyView:after{content:"";position:absolute;width:1px;height:12px;background:#d1d1d1;right:0;top:8px;}
+    .boardCommon .BBSlist.default_table .hasArea .hasfile{margin-top:3px;}
+    .boardCommon .BBSlist.default_table .hasArea .hasfileNum>span{color:#666;}
+
+    /* 링크게시판(썸네일) */
+    .typeIpsi .BBSlist.photo_table .noArticle{padding:12px 15px;}
+    .typeIpsi .BBSlist.photo_table tr:not(.noArticle){position:relative;padding:12px 15px 12px 245px;min-height:159px;align-content:center;}
+    .typeIpsi .BBSlist.photo_table .photo{display:block !important;position:absolute;left:15px;top:12px;width:200px;}
+    .typeIpsi .BBSlist.photo_table .photo a{display:block;position:relative;width:100%;padding-bottom:67.5%;}
+    .typeIpsi .BBSlist.photo_table .photo img{width:100%;height:100%;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);object-fit:cover;object-position:center top;}
+    
+    /* QnA */
+    .boardCommon .BBSlist.qna_table .tbodyResult{order:1;}
+    .boardCommon .BBSlist.qna_table .tbodyNum{order:2;width:auto;padding-left:10px;margin-left:10px;position:relative;}
+    .boardCommon .BBSlist.qna_table .tbodyTitle{order:3;}
+    .boardCommon .BBSlist.qna_table .tbodyWriter{order:4;}
+    .boardCommon .BBSlist.qna_table .tbodyDate{order:5;}
+    .boardCommon .BBSlist.qna_table .tbodyView{order:6;}
+    .boardCommon .BBSlist.qna_table .tbodyFile{order:7;}
+    .boardCommon .BBSlist.qna_table .result{font-size:15px;}
+    .boardCommon .BBSlist.qna_table .tbodyNum:before{content:"";position:absolute;width:1px;height:12px;background:#d1d1d1;left:0;top:8px;display:block !important;}
+
+    /* QnA(쓰기) */
+    .qna_write_table colgroup{display:none;}
+    .qna_write_table .lineTop_tbL2,
+    .qna_write_table .lineTop_tbL2 tbody,
+    .qna_write_table .lineTop_tbL2 tr,
+    .qna_write_table .lineTop_tbL2 th, 
+    .qna_write_table .lineTop_tbL2 td{display:block;width:100%;box-sizing:border-box;height:auto;}
+    .qna_write_table .lineTop_tbL2 colgroup col{display:none;}
+    .qna_write_table .lineTop_tbL2 th, 
+    .qna_write_table .lineTop_tbL2 td,
+    .qna_write_table .lineTop_tbL2 td.txtL{background:transparent;border:none;text-align:left;}
+    .qna_write_table .lineTop_tbL2 tr{padding:13px 13px 0 13px !important;}
+    .qna_write_table .lineTop_tbL2 th{margin-bottom:5px;padding:0 !important;}
+    .qna_write_table .lineTop_tbL2 td,
+    .qna_write_table .lineTop_tbL2 td.txtL{border:none !important;border-bottom:1px solid #D1D1D1 !important;padding:0 0 13px 0 !important;}
+    .qna_write_table .lineTop_tbL2 td ~ th{margin-top:15px;}
+
+    /* 입찰정보 게시판 */
+    .boardCommon .tender_table td:nth-child(1){order:2;padding-left:10px;margin-left:10px;position:relative;}
+    .boardCommon .tender_table td:nth-child(2){order:3;width:100%;}
+    .boardCommon .tender_table td:nth-child(3){order:4;}
+    .boardCommon .tender_table td:nth-child(4){order:5;}
+    .boardCommon .tender_table td:nth-child(5){order:6;}
+    .boardCommon .tender_table td:nth-child(6){order:1;}
+    .typeIpsi .BBSlist.tender_table tr.typeNoti td.tbodyNum,
+    .typeIpsi .BBSlist.tender_table .tbodyNum{width:auto;}
+    .boardCommon .BBSlist.tender_table .tbodyNum:before{content:"";position:absolute;width:1px;height:12px;background:#d1d1d1;left:0;top:8px;display:block !important;}
+
+    /* 전년도입시결과 */
+    .typeIpsi .contTable.ipsi_table3 .tableBr{display:block;}
+    .typeIpsi .lineTop_tbArea.ipsi_table4 table colgroup col:first-child{width:200px;}
+    .typeIpsi .lineTop_tbArea.ipsi_table7 table colgroup col:first-child{width:240px;}
+
+    /* 전공심화과정안내 */
+    .jongong_taking .taking_inner{width:390px;justify-content:center;}
+    .jongong_taking .taking_inner> div .jongong_bx{width:160px;height:161px;}
+    .jongong_taking .taking_inner> div .plus{margin:0 20px;}    
+    .jongong_taking .taking_inner> div,
+    .jongong_taking .taking_inner> div:not(.jongong4) .jongong_bx{position:relative;}
+    .jongong_taking .taking_inner> div:not(.jongong4):before{content:"";position:absolute;width:230px;height:1px;border-top:1px dashed #D1D1D1;left:50%;transform:translateX(-50%);}
+    .jongong_taking .taking_inner> div:not(.jongong4) .jongong_bx:before{content:"";position:absolute;width:1px;height:20px;border-left:1px dashed #D1D1D1;left:50%;transform:translateX(-50%);}
+    .jongong_taking .taking_inner> div.jongong1{padding-bottom:21px;}
+    .jongong_taking .taking_inner> div.jongong1:before{bottom:0;}
+    .jongong_taking .taking_inner> div.jongong1 .jongong_bx:before{bottom:-20px;}
+    .jongong_taking .taking_inner> div.jongong2{padding-top:21px;}
+    .jongong_taking .taking_inner> div.jongong2:before{top:0;}
+    .jongong_taking .taking_inner> div.jongong2 .jongong_bx:before{top:-20px;}
+    .jongong_taking .taking_inner> div.jongong4{padding:40px 0;}
+    .jongong_taking .taking_inner> div.jongong4:before{width:1px;height:100%;border-top:none;border-left:1px dashed #D1D1D1;left:50%;top:0;transform:translate(-50%,0);}
+    .jongong_taking .taking_inner> div.jongong4 .jongong_bx{width:200px;height:200px;}
+    .jongong_taking .taking_inner> div.jongong4 .jongong_bx .tit_h4{font-size:18px;line-height:26px;}
+    
+    /* 편입학안내 */
+    .pyeonib_qualification colgroup col:nth-child(1){width:120px;}
+    .pyeonib_info_table colgroup col:nth-child(1){width:120px;}
+    .pyeonib_info_table colgroup col:nth-child(2){width:100px;}
+    .pyeonib_info_table colgroup col:nth-child(3){width:240px;}
+    .pyeonib_info_table colgroup col:nth-child(4){width:120px;}
+    .pyeonib_info_table colgroup col:nth-child(5){width:calc(100% - 580px);}
+
+    /* 대학안내 */
+    .universityCont > div.university_bx{display:block;padding:30px 0 18px;}
+    .universityCont > div.university_bx:first-child{padding:0 0 18px;}
+    .universityCont > div.university_bx:last-child{padding:30px 0 0;}
+    .universityCont > div.university_bx > div{width:100%;}
+    .universityCont > div.university_bx:nth-child(odd) > div:nth-child(1),
+    .universityCont > div.university_bx:nth-child(even) > div:nth-child(1){margin:0;}
+    .universityCont > div.university_bx:nth-child(odd) > div:nth-child(2),
+    .universityCont > div.university_bx:nth-child(even) > div:nth-child(2),.universityCont #departmentG .txt_bx{padding:23px 0 0 0;}    
+    .universityCont > div.university_bx .txt_bx h3{font-size:27px;line-height:37px;}
+    .universityCont > div.university_bx .txt_bx p{font-size:16px;line-height:24px;}
+    .universityCont > div.university_bx .txt_bx ul{margin-top:36px;}
+    .universityCont > div.university_bx .txt_bx .btnArrow{padding:14px 49px 13px 29px;}    
+    .universityCont > div.university_bx .txt_bx .btnArrow span{font-size:15px;line-height:16px;}
+    .universityCont > div.university_bx .txt_bx .btnArrow:after{right:24px;width:7px;height:13px;top:50%;}
+    .universityCont > div.university_bx .txt_bx .btnArrow[target="_blank"]{padding:14px 52px 13px 29px;}
+    .universityCont > div.university_bx .txt_bx .btnArrow[target="_blank"]:after{width:13px;height:13px;right:24px;}
+
+    /* 장학금대상 */
+    .scholarshipTarget .tit_h2{margin:0 0 20px;}
+    .scholarshipTarget .listTable{margin-top:20px;}
+    .scholarshipTarget .listTable .half:first-child,
+    .scholarshipTarget .listTable .half:last-child{width:100%;}
+    .scholarshipTarget .listTable .txtList li{padding:20px 20px 21px 65px;}
+    .scholarshipTarget .listTable .txtList li:before{font-size:17px;left:25px;top:23px;line-height:1.1;}
+
+    /* 240816 추가 */
+    .scholarshipTarget .iconEtcArea{padding:26px 20px !important;}
+    .scholarshipTarget .iconEtcArea .txtList > li{margin:0 10px;}
+    .scholarshipTarget .iconEtcArea .txtList.half > li{width:calc(50% - 20px);}
+    .scholarshipTarget .iconEtcArea .txtList.three > li{width:calc(50% - 20px);}
+    /* //240816 추가 */
+    
+    /* 교내장학금 */
+    .typeIpsi .lineTop_tbArea.onCampus_table table{width:1000px;}
+
+    /* 해외인턴십 */
+    .typeIpsi .lineTop_tbArea.internship_table table{width:990px;}
+
+    /* 해외어학연수 */
+    .typeIpsi .lineTop_tbArea.training_table table{width:1240px;}
+    .training_table table colgroup col:nth-child(1){width:120px !important;}
+    .training_table table colgroup col:not(:nth-child(1)){width:calc(20% - 120px) !important;}
+
+    /* 글로벌역량강화 */
+    .capacity_table table colgroup col:nth-child(1){width:120px !important;}
+    .capacity_table table colgroup col:not(:nth-child(1)){width:calc(50% - 120px) !important;}
+    
+    /* 글로벌프로그램 */
+    .typeIpsi .globalCommon .txtAppendix{position:relative;padding-left:24px;text-align:left;}
+    .typeIpsi .globalCommon .txtAppendix .mark_appendix{position:absolute;left:0;top:0;}
+
+    /* 세계로장학금 */
+    .scholarship_table table colgroup col:nth-child(1){width:140px !important;}
+    .scholarship_table table colgroup col:not(:nth-child(1)){width:calc(100% - 140px) !important;}
+
+    /* 취업안내 */
+    .employmentInfo .employment_title{padding-top:20px;}
+    .employmentInfo .employment_title h2{font-size:56px;line-height:80px;}
+    .employmentInfo .employment_row{margin:50px 0 0 0;}
+    .employmentInfo .employment_row> div{padding:0;width:100%;}
+    .employmentInfo .employment_row> div:not(last-child),
+    .employmentInfo .employment_row> div:nth-child(1),
+    .employmentInfo .employment_row> div:nth-child(2){margin-bottom:50px;}
+    .employmentInfo .employment_row .txt_bx,
+    .employmentInfo .employment_row> div:nth-child(3) .txt_bx,
+    .employmentInfo .employment_row> div:nth-child(4) .txt_bx{margin-top:23px;}
+    .employmentInfo .employment_row .txt_bx h5{font-size:17px;line-height:26px;margin-bottom:5px;}
+    .employmentInfo .employment_row .txt_bx .tit_h2{font-size:27px;line-height:32px;margin:0 0 20px 0;}
+    .employmentInfo .employment_row .txt_bx .txtAlert{margin-top:9px;}
+
+    /* 찾아오시는 길 */
+    .locationMap{margin-top:0;}
+    .locationMap .map_bx .map_inner .kakaomap .wrap_map{height:450px !important;}
+    .locationMap .map_bx .map_info{padding:30px 0;}
+    .locationMap .map_bx .map_info li{padding:0 26px;width:100%;}
+    .locationMap .map_bx .map_info .tit_h3{font-size:18px;}
+    .locationMap .map_bx .map_info li:not(:first-child){margin-top:30px;padding-top:30px;}
+    .locationMap .map_bx .map_info li:not(:first-child):before{width:calc(100% - 52px);height:1px;left:50%;top:0;transform:translate(-50%,0);}
+
+    /* 교통안내 */
+    .locationInfo{margin-top:0;}
+
+    /* 캠퍼스맵 */
+    .typeIpsi .campus_map_tab{left:0;}
+
+    /* 개인정보처리방침 */
+    .utilPrivacy .privacy_history_table2 colgroup col:nth-child(1){width:220px !important;}
+    .utilPrivacy .privacy_history_table2 colgroup col:nth-child(2){width:calc(100% - 220px) !important;}
+    .utilPrivacy .txtAlert{background-position:left top 6px;}
+    .utilPrivacy .baseBtn{height:auto;}
+    .utilPrivacy .baseBtn>.base{padding:14px 45px 13px 20px;}
+    .utilPrivacy img{width:100%;}
+    .utilPrivacy #privacy1 .util_bx ~ .util_bx,
+    .utilPrivacy .util_bx:first-of-type,
+    .utilPrivacy .util_bx ~ .util_bx,
+    .utilPrivacy #privacy10 .privacy_team,
+    .utilPrivacy #privacy10 .txtAlert ~ .util_bx,
+    .utilPrivacy #privacy10 .util_bx ~ .util_bx{margin-top:20px;}
+    .utilPrivacy .util_bx .tit_h3 ~ .txtBody1,
+    .utilPrivacy .util_bx .tit_h3 ~ .contTable,
+    .utilPrivacy #privacy10 img,
+    .utilPrivacy .txtBody1 ~ .txtList{margin-top:10px;}
+    .utilPrivacy #privacy10 .util_bx:last-child p{margin:20px 0;}
+    
+    /* 학과안내 */
+    .deptCommon{margin-top:0;word-break:keep-all;}
+    .deptCommon h3{margin:0 0 10px;font-size:27px;line-height:37px;}
+    .deptCommon h4{margin:0 0 15px;font-size:17px;line-height:24px;}
+    .deptCommon .btnList{margin:20px 0 0;}
+    .deptCommon .btnList .baseBtn>.base,
+    .deptCommon .btnList .baseBtn.downBtn>.base{padding:14px 45px 13px 20px;}
+    .deptCommon .btnList .baseBtn.siteBtn:after,
+    .deptCommon .btnList .baseBtn.downBtn:after{right:20px;}
+    .deptVisual{margin-bottom:60px;}
+    .deptVisual .deptTxt{padding:30px 20px;display:flex;flex-wrap:wrap;justify-content:center;align-content:center;}
+    .deptVisual .deptTxt h2,.deptVisual .deptTxt h3,.deptVisual .deptTxt p{width:100%;}
+    .deptVisual .deptTxt h2{font-size:56px;line-height:60px;margin:0 0 20px;}
+    .deptVisual .deptTxt h3{font-size:21px;line-height:30px;}
+    .deptVisual .deptTxt p{font-size:14px;line-height:24px;}
+    .deptCard .deptItems{width:100%;}
+    .deptCard .deptItems:nth-child(n+3){margin-top:0;}
+    .deptCard .deptItems:not(:last-child){margin-bottom:60px;}
+    .deptCard .img_bx{margin:0 0 20px;height:240px;background-position:center center;}
+    .deptDesign .deptTxt h2 br,
+    .deptLife .deptTxt h2 br,
+    .deptMedia .deptTxt h2 br,
+    .deptBusiness .deptTxt h2 br{display:block;}
+    .deptRow .deptItems> div{width:100%;}
+    .deptRow .deptItems:nth-child(odd) > div:nth-child(1){margin-right:0;}
+    .deptRow .deptItems:nth-child(odd) > div:nth-child(2){padding:20px 0 0;}
+    .deptRow .deptItems:nth-child(even) > div:nth-child(1){order:1;margin-left:0;}
+    .deptRow .deptItems:nth-child(even) > div:nth-child(2){order:2;padding:20px 0 0;}
+    .deptRow .deptItems .img_bx{height:360px;background-position:center center;}
+    .deptRow .deptItems:not(:last-child){margin-bottom:50px;}
+}
+
+@media all and (max-width:1200px){
+    #sitemap_gnb>li>.menuM>li>.menuS>li{width:33.333%;}
+}
+
+@media all and (max-width:899px){
+    /* 교통안내 */
+    .typeIpsi .lineTop_tbArea.way_table table {width:920px;}
+    .typeIpsi .bus_way > div:nth-child(3) .lineTop_tbArea.way_table table,
+    .typeIpsi .bus_way > div:nth-child(4) .lineTop_tbArea.way_table table{width:100%;}
+
+    /* 스쿨버스시간표 */
+    .typeIpsi .lineTop_tbArea.schoolbus_table table{width:850px;}
+}
+    
+@media all and (max-width:768px){
+    /* tab */
+    .tabWrap{padding:0 17px;}
+
+    /* 모집안내 */
+    .formApply .applyTable table,.formApply .applyTable table tbody,
+    .formApply .applyTable table tr,.formApply .applyTable table th,.formApply .applyTable table td{display:block;width:100%;box-sizing:border-box;height:auto;}
+    .formApply .applyTable table colgroup col{width:100%;}
+    .formApply .applyTable table th,.formApply .applyTable table td,.formApply .applyTable table td.txtL{padding:0 !important;background:transparent;border:none;text-align:left;}
+    .formApply .applyTable table tr{padding:13px;border-bottom:1px solid #D1D1D1;}
+    .formApply .applyTable table th{margin-bottom:5px;}
+    .applyTable .a_name .inputBase{width:315px;}
+    .applyTable .a_tel .inputBase,.applyTable .a_tel .selectBase,.applyTable .a_tel .selectBase .toggleBtn{width:90px;}
+
+    /* 신청완료 */
+    .formApplyResult .box_bg{padding:115px 23px 25px;background-size:68px auto;background-position:center top 24px;}
+    .formApplyResult .box_bg .tit_h2{font-size:22px;line-height:29px;}
+    .formApplyResult .box_bg .txtBody1{font-size:15px;line-height:24px;word-break: keep-all;}
+    .formApplyResult .box_bg .btn_Area{margin:28px 0 0 0;}
+    .formApplyResult .box_bg .baseBtn>.base{font-size:15px;padding:8px 15px;}
+    /* 입학자료 신청완료 */
+    .materialsResult .box_bg{background-position:center top 28px;}
+
+    /* 게시판 공통 */
+    .board_admission >div ~ div{margin-top:34px;}
+    .boardCommon .board_table{display:block;width:100%;}
+    .boardCommon .board_table thead{display:none;}
+    .boardCommon .board_table tbody,.boardCommon .board_table tr,.boardCommon .board_table th,.boardCommon .board_table td{display:block;}
+    .boardCommon .board_table th,.boardCommon .board_table td{padding:0;}
+    .boardCommon .board_table tr{border-bottom:1px solid #D1D1D1;padding:12px 0px;text-align:left;display:flex;flex-wrap:wrap;}
+    .boardCommon .board_table td:before{content:attr(data-cell-header) !important;display:inline-block !important;font-family:"Roboto", 'Noto Sans KR', sans-serif;}
+    .boardCommon .board_table a{font-size:18px;font-weight:500;}
+    .boardCommon .board_table .tbodyNum,.boardCommon .board_table .tbodyWriter{width:100%;}    
+    .boardCommon .answer{color:#2DAB40;margin-left:5px;}
+    .boardCommon .pagination{box-sizing:content-box;text-align:center;vertical-align:middle;}
+    .boardCommon .board_table tr .typeNoArticle{width:100%;}
+    .boardCommon .no_article{padding:140px 0 30px 0;background-position:center top 30px;}
+    .boardCommon .board_table .typeNoArticle:before{display:none !important;}
+    .boardCommon .board_table .tbodyTitle{margin:0 0 5px;width:100%;}
+    .boardCommon .board_table .tbodyNum:before,.boardCommon .board_table .tbodyTitle:before,.boardCommon .board_table .tbodyFile:before{display:none !important;}
+
+    /* 입학자료 신청 */
+    .board_admission .board_table .tbodyDept,.board_admission .board_table .tbodyApply,.board_admission .board_table .tbodyDate{margin-right:0px;}
+    .board_admission .board_table .tbodyDept span,
+    .board_admission .board_table .tbodyApply span,
+    .board_admission .board_table .tbodyDate span,
+    .board_admission .board_table .tbodyState span,.boardCommon .board_table td:before{font-size:14px;line-height:18px;color:#666;}
+    .board_admission .board_table .tbodyDept,
+    .board_admission .board_table .tbodyApply,
+    .board_admission .board_table .tbodyDate,
+    .board_admission .board_table .tbodyState{width:50%;}
+    .board_admission .admis_i, .addressSech .bottomA .addressI,
+    .board_admission .admis_i.a_tel .telNumber{width:100%;}
+    .boardCommon .board_table .tbodyWriter:before{display:none !important;}
+    .addressSech .bottomA .addressDtl{width:100%;margin:10px 0 0 0;}
+    .board_admission .admis_i.a_tel .selectBase, .board_admission .admis_i.a_tel .inputBase{width:90px;}
+
+    /* 첨부파일 */
+    .fileArea a span{font-size:14px;line-height:18px;}
+
+    /* 게시판 상세 */    
+    .typeIpsi .BBSlist_v .txtInfo>span {font-size:14px;}
+    .typeIpsi .BBSlist_v dt .mark_categ{font-size:16px;}
+    .typeIpsi .BBSlist_v .headLine3{font-size:22px;}
+    .typeIpsi .BBSlist_v dd{padding:25px 10px;}
+    .typeIpsi .prevNnext li{padding:17px 10px !important;}
+    .typeIpsi .prevNnext li>strong,
+    .typeIpsi .prevNnext li>.no_article,
+    .typeIpsi .prevNnext li>.article>.mark_categ,
+    .typeIpsi .prevNnext li>.article>a{font-size:14px;}
+    
+    /* 일반게시판 */
+    .boardCommon .default_table .tbodyWriter{width:auto;}
+    .boardCommon .BBSlist.default_table .writer{color:#666;font-size:14px;}
+    .boardCommon .default_table td{height:auto;}    
+    .boardCommon .default_table .tbodyNum{order:1;width:auto;}
+    .boardCommon .default_table .tbodyTitle{order:2;}
+    .boardCommon .default_table .tbodyFile{order:6;} 
+    .boardCommon .default_table .tbodyWriter{order:3;} 
+    .boardCommon .default_table .tbodyDate{order:4;} 
+    .boardCommon .default_table .tbodyView{order:5;}
+    .boardCommon .default_table td.tbodyWriter:before{content:attr(data-cell-header) !important;display:inline-block !important;font-family:"Roboto", 'Noto Sans KR', sans-serif;}
+    .boardCommon .default_table .tbodyWriter,
+    .boardCommon .default_table .tbodyDate,
+    .boardCommon .default_table .tbodyView{position:relative;padding-right:10px;margin-right:10px;}
+    .boardCommon .default_table .tbodyWriter:after,
+    .boardCommon .default_table .tbodyDate:after,
+    .boardCommon .default_table .tbodyView:after{content:"";position:absolute;width:1px;height:12px;background:#d1d1d1;right:0;top:8px;}
+    .boardCommon .BBSlist.default_table .hasArea .hasfile{margin-top:3px;}
+    .boardCommon .BBSlist.default_table .hasArea .hasfileNum>span{color:#666;}
+    .boardCommon .BBSlist.default_table tr td:first-child>span{display:block;}
+    .boardCommon .board_table td.tbodyCateg:before,
+    .boardCommon .BBSlist.default_table tr td.tbodyCateg:before{display:none !important;}
+    .boardCommon .BBSlist.default_table tr.typeNoti td.tbodyNum{margin:0;}
+    .boardCommon .BBSlist.default_table tr.typeNoti .txtL{padding:0 5px 0 0;}
+    .boardCommon .BBSlist.default_table .typeFile [data-cell-header]:before{background:none;padding-left:0;}
+
+    /* 링크게시판(썸네일) */
+    .typeIpsi .BBSlist.BBSphoto.photo_table tr{padding:12px 0 !important;}
+    .typeIpsi .BBSlist.photo_table .noArticle{padding:12px 0 !important;}
+    .typeIpsi .BBSlist.photo_table tr:not(.noArticle){padding:12px 0 12px 175px !important;min-height:132px;}
+    .typeIpsi .BBSlist.photo_table .photo{display:block !important;position:absolute;left:0;top:12px;width:160px;}
+    .typeIpsi .BBSlist.photo_table .photo:before,
+    .typeIpsi .BBSlist.photo_table .tbodyNum{display:none !important;}
+    .typeIpsi .BBSlist.photo_table [data-cell-header]{margin-left:0;}
+    .typeIpsi .BBSlist.photo_table td.tbodyDate:before{content:attr(data-cell-header) !important;display:inline-block !important;font-family:"Roboto", 'Noto Sans KR', sans-serif;}
+    
+    /* FAQ */
+    .AccordionBase>li .AccordionBtn{padding:21px 50px 20px 44px;}
+    .AccordionBase>li .AccordionBtn>span{font-size:17px;}
+    .AccordionBase>li .AccordionBtn::after{right:17px;width:20px;}
+    .AccordionBase>li .AccordionBtn::before,
+    .AccordionBase>li .AccordionCont::before{left:17px;}
+    .AccordionBase>li .AccordionCont{padding:0 44px 33px 44px;}
+
+    /* QnA */
+    .boardCommon .BBSlist.qna_table .tbodyResult{order:1;}
+    .boardCommon .BBSlist.qna_table .tbodyNum,
+    .boardCommon .BBSlist.qna_table tr.typeNoti td.tbodyNum{order:2;width:auto;padding-left:10px;margin:0 0 0 10px;position:relative;}
+    .boardCommon .BBSlist.qna_table .tbodyTitle{order:3;}
+    .boardCommon .BBSlist.qna_table .tbodyWriter{order:4;}
+    .boardCommon .BBSlist.qna_table .tbodyDate{order:5;}
+    .boardCommon .BBSlist.qna_table .tbodyView{order:6;}
+    .boardCommon .BBSlist.qna_table .tbodyFile{order:7;}
+    .boardCommon .BBSlist.qna_table .result{font-size:15px;}
+    .boardCommon .BBSlist.qna_table .tbodyNum:before{content:"";position:absolute;width:1px;height:12px;background:#d1d1d1;left:0;top:8px;display:block !important;}
+
+    /* 입찰정보 게시판 */
+    .boardCommon .tender_table td:nth-child(1){order:2;padding-left:10px;margin-left:10px;position:relative;}
+    .boardCommon .tender_table td:nth-child(2){order:3;width:100%;}
+    .boardCommon .tender_table td:nth-child(3){order:4;}
+    .boardCommon .tender_table td:nth-child(4){order:5;}
+    .boardCommon .tender_table td:nth-child(5){order:6;}
+    .boardCommon .tender_table td:nth-child(6){order:1;}
+    .boardCommon .BBSlist.tender_table tr.typeNoti td.tbodyNum{margin-left:10px;padding-left:10px;}
+
+    /* 모집일정 */
+    .typeIpsi .bachelor_month .calList_con{width:100%;}
+    .typeIpsi .calList_con.typeToday li{padding-left:0;}
+
+    /* 전년도입시결과 */    
+    .typeIpsi .lineTop_tbArea.ipsi_table table colgroup col:first-child,
+    .typeIpsi .lineTop_tbArea.ipsi_table2 table colgroup col:first-child{width:160px;}
+    .typeIpsi .lineTop_tbArea.ipsi_table3 table colgroup col:first-child,
+    .typeIpsi .lineTop_tbArea.ipsi_table4 table colgroup col:first-child,
+    .typeIpsi .lineTop_tbArea.ipsi_table5 table colgroup col:first-child{width:180px;}
+    .typeIpsi .lineTop_tbArea.ipsi_table6 table colgroup col:first-child{width:240px;}
+    .typeIpsi .lineTop_tbArea.ipsi_table7 table colgroup col:first-child{width:200px;}
+    .typeIpsi .lineTop_tbArea.ipsi_table table{width:1100px;}
+    .typeIpsi .contTable.ipsi_table2 table,
+    .typeIpsi .contTable.ipsi_table3 table,
+    .typeIpsi .contTable.ipsi_table4 table,
+    .typeIpsi .contTable.ipsi_table5 table,
+    .typeIpsi .contTable.ipsi_table6 table,
+    .typeIpsi .contTable.ipsi_table7 table{width:100%;}
+    .typeIpsi .contTable.ipsi_table3 .tableBr{display:none;}
+
+    /* 전공심화과정안내 */
+    .jongong_info .division:first-child{margin-bottom:39px;}
+    .jongong_info .box_icon{padding:115px 23px 30px;background-position:center top 24px;}
+    .jongong_info .division.jongong_taking{margin-top:34px;}
+    .jongong_taking .taking_inner{width:100%;}
+    .jongong_taking .taking_inner> div .jongong_bx{width:120px;height:120px;}
+    .jongong_taking .taking_inner> div.jongong4 .jongong_bx{width:170px;height:170px;}
+    .jongong_taking .taking_inner> div:nth-child(3){width:100%;text-align:center;justify-content:center;}
+    .jongong_taking .taking_inner> div:not(.jongong4):before{width:190px;}
+
+    /* 편입학안내 */
+    .pyeonib_info .division:first-child .tit_h2{margin:0 0 21px 0;} 
+    .pyeonib_info .pyeonib_qualification table tbody td.txtL{padding:15px 5px 14px 21px !important;}
+    .pyeonib_info .pyeonib_qualification table tbody tr:last-child td.txtL{padding:15px 5px 14px 21px !important;}
+    .typeIpsi .contTable.pyeonib_qualification table{width:100%;}
+    .pyeonib_qualification colgroup col:nth-child(1){width:120px;}
+    .typeIpsi .contTable.pyeonib_info_table table{width:760px;}
+    .pyeonib_info_table colgroup col:nth-child(1){width:120px;}
+    .pyeonib_info_table colgroup col:nth-child(2){width:100px;}
+    .pyeonib_info_table colgroup col:nth-child(3){width:240px;}
+    .pyeonib_info_table colgroup col:nth-child(4){width:120px;}
+    .pyeonib_info_table colgroup col:nth-child(5){width:calc(100% - 580px);}
+
+    /* 대학안내 */
+    .universityCont > div.university_bx .img_bx{height:240px;}
+
+    /* 장학금대상 */
+    .scholarshipTarget .listTable .txtList li{padding:15px 15px 15px 50px;word-break: keep-all;}
+    .scholarshipTarget .listTable .txtList li:before{left:15px;top:18px;}
+
+    /* 240816 추가 */
+    .scholarshipTarget .iconEtcArea{padding:20px 23px 21px !important;}
+    .scholarshipTarget .iconEtcArea .txtList > li{margin:0;text-align:left;}
+    .scholarshipTarget .iconEtcArea .txtList.half > li,
+    .scholarshipTarget .iconEtcArea .txtList.three > li{width:100%;}
+    .scholarshipTarget .iconEtcArea .txtList > li:not(:last-child){margin-top:4px;}
+    /* //240816 추가 */
+    
+    /* 교내장학금 */
+    .onCampus_table colgroup col:nth-child(1),
+    .onCampus_table colgroup col:nth-child(2){width:130px !important;}
+    .onCampus_table colgroup col:nth-child(3){width:55px !important;}
+    .onCampus_table colgroup col:nth-child(4){width:calc(100% - 645px) !important;}
+    .onCampus_table colgroup col:nth-child(5),
+    .onCampus_table colgroup col:nth-child(6),
+    .onCampus_table colgroup col:nth-child(7){width:110px !important;}
+    .typeIpsi .lineTop_tbArea.onCampus_table table{width:900px;}
+
+    /* 교외장학금 */
+    .scholarshipTarget .listTable.offCampusTable{margin-bottom:39px;}
+
+    /* 정부보증 학자금융자 대출 */
+    .scholarshipLoan .tit_h2{margin-top:0px;}
+    .scholarshipLoan .tit_h3{margin:20px 0 16px;}
+
+    /* 글로벌역량강화 */
+    .typeIpsi .contTable.capacity_table table{width:100%;}
+    .capacity_table table colgroup col:nth-child(1){width:120px !important;}
+    .capacity_table table colgroup col:not(:nth-child(1)){width:calc(50% - 120px) !important;}
+
+    /* 글로벌프로그램 */
+    .globalCommon .txtAlert ~ .txtList li, .globalCommon .txtAppendix{font-size:13px;line-height:19px;}
+
+    /* 해외대학교류 */
+    .typeIpsi .contTable.exchange_table table{width:100%;}
+    .typeIpsi .contTable.exchange_table table td{word-break: keep-all;}
+    .exchange_table table colgroup col:nth-child(1){width:100px !important;}
+    .exchange_table table colgroup col:not(:nth-child(1)){width:calc(100% - 100px) !important;}
+
+    /* 학생SGLT */
+    .typeIpsi .contTable.sglt_table table{width:100%;}
+    .sglt_table table colgroup col:nth-child(1){width:120px !important;}
+    .sglt_table table colgroup col:not(:nth-child(1)){width:calc(100% - 120px) !important;}
+
+    /* 세계로장학금 */
+    .typeIpsi .contTable.scholarship_table table{width:100%;}
+    .scholarship_table table colgroup col:nth-child(1){width:130px !important;}
+    .scholarship_table table colgroup col:not(:nth-child(1)){width:calc(100% - 130px) !important;}
+
+    /* 취업안내 */
+    .employmentInfo .employment_title{word-break: keep-all;}
+    .employmentInfo .employment_title h2{font-size:46px;line-height:60px;}
+
+    /* 찾아오시는 길 */
+    .locationMap .map_bx .map_inner .kakaomap .wrap_map{height:400px !important;}
+    .locationMap .map_bx .map_info{padding:25px 0;word-break: keep-all;}
+    .locationMap .map_bx .map_info li{padding:0 20px;}
+    .locationMap .map_bx .map_info li:not(:first-child){margin-top:25px;padding-top:25px;}
+    .locationMap .map_bx .map_info li:not(:first-child):before{width:calc(100% - 40px);}
+    
+    /* 교통안내 */
+    .locationInfo .location_way .way_bx:not(:last-child){margin-bottom:20px;}
+    .locationInfo .location_way .way_bx .tit_h3{margin-bottom:10px;}
+    .typeIpsi .lineTop_tbArea.way_table table{width:850px;}
+    .typeIpsi .lineTop_tbArea.way_table table colgroup col:not(:last-child){width:110px !important;}
+    .typeIpsi .lineTop_tbArea.way_table table colgroup col:last-child{width:calc(100% - 220px) !important;}
+
+    /* 스쿨버스시간표 */
+    .typeIpsi .locationSchoolbus .division+.division{margin-top:37px;}
+
+    /* 이용안내 */
+    .utilCommon{margin-top:0;}
+    .utilCommon .tit_h3 ~ .txtList{margin-top:0;}
+
+    /* 개인정보처리방침 */
+    .typeIpsi .utilPrivacy .division+.division{margin-top:37px;}
+    .typeIpsi .utilPrivacy #privacy10 .contTable.privacy_team table{width:100%;}
+    .typeIpsi .utilPrivacy #privacy10 .contTable.privacy_team colgroup col:nth-child(1){width:120px !important;}
+    .typeIpsi .utilPrivacy #privacy10 .contTable.privacy_team colgroup col:nth-child(2){width:calc(100% - 120px) !important;}
+
+    /* 대학자체평가 안내 */
+    .typeIpsi .utilEvaluation .txtAlert{margin:10px 0 30px;background-position:left top 3px;}
+    .utilEvaluation .btnList .baseBtn>.base{padding:12px 43px 12px 20px;}
+    .utilEvaluation .btnList .baseBtn:after{right:20px;}
+
+    /* 학과안내 */
+    .deptVisual .deptBg{height:100%;width:100%;position:absolute;left:0;top:0;background-position:center center;}
+    .deptVisual .deptTxt{padding:60px 20px;position:relative;}
+    .deptVisual .deptTxt h2{font-size:42px;line-height:46px;}
+    .deptVisual .deptTxt p br{display:none;}
+    .deptCommon .btnList{display:block;}
+    .deptCommon .btnList li{display:inline-block;margin:0 10px 10px 0 !important;}
+    .deptCard .deptItems:not(:last-child){margin-bottom:50px;}
+
+}
+
+@media all and (max-width:760px){
+    /* 캠퍼스맵 */
+    .typeIpsi .campusMap_inner{position:relative;height:100%;position:relative;}
+    .typeIpsi .campus_map_area{padding:0 17px 240px; }
+    .typeIpsi .campusMap_inner .mCSB_scrollTools .mCSB_draggerRail{background:transparent;}
+    .typeIpsi .campusMap_inner .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background:#fff;}
+
+    /* 전년도입시결과 */
+    .typeIpsi .contTable.ipsi_table3 table,
+    .typeIpsi .contTable.ipsi_table5 table{width:726px;}
+
+    /* 교통안내 */
+    .typeIpsi .bus_way > div:nth-child(3) .lineTop_tbArea.way_table table,
+    .typeIpsi .bus_way > div:nth-child(4) .lineTop_tbArea.way_table table{width:730px;}
+}
+
+@media all and (max-width:660px){
+    /* 전년도입시결과 */
+    .typeIpsi .contTable.ipsi_table2 table,
+    .typeIpsi .contTable.ipsi_table6 table{width:630px;}
+    .typeIpsi .contTable.ipsi_table7 .tableBr{display:block;}
+
+    /* 글로벌역량강화 */
+    .typeIpsi .contTable.capacity_table table{width:630px;}
+
+    /* 학과안내 */
+    .deptRow .deptItems br{display:none;}
+}
+
+@media all and (max-width:600px){
+    /* 확인번호 팝업 */
+    .typeIpsi #pop_pwCheck .popLayout.popLayer{max-width:calc(100% - 60px) !important;}
+
+    /* 썸네일 기본 */
+    .typeIpsi .BBSgallery.Thumbnail:before{left:10px;}
+    .typeIpsi .BBSgallery.Thumbnail ul{margin:0 -10px -1px;width:calc(100% + 20px);}
+    .typeIpsi .BBSgallery.Thumbnail li:not(.typeNoArticle){width:calc(100% - 20px);margin:0 10px 40px 10px;}
+    
+    /* 썸네일 상세목록 */
+    .typeIpsi .BBSgallery.rowDtl li .photo{width:100%;height:auto;margin:0 0 17px 0;}
+    .typeIpsi .BBSgallery.rowDtl li .photo a{padding-bottom:67.5%;}
+    .typeIpsi .BBSgallery.rowDtl li .photo a img{object-fit:cover;object-position:center top;}
+    .typeIpsi .BBSgallery.rowDtl li .infoArea{width:100%;}
+
+    /* QnA(쓰기) */
+    .qna_write_table .admis_i{max-width:100%;}
+}
+
+@media all and (max-width:560px){
+    /* 페이지버튼 */
+    .typeIpsi .pagination .paging{height:auto;}
+    .boardCommon .pagination a,
+    .boardCommon .pagination>a>span{width:26px;height:26px;}
+
+    /* 링크게시판(썸네일) */
+    .typeIpsi .BBSlist.photo_table tr:not(.noArticle){padding:12px 0 12px 110px !important;min-height:92px;}
+    .typeIpsi .BBSlist.photo_table .photo{width:100px;}    
+
+    /* 편입학안내 */
+    .pyeonib_qualification colgroup col:nth-child(1){width:100px;}
+
+    /* 해외대학교류 */
+    .exchange_table table colgroup col:nth-child(1){width:80px !important;}
+    .exchange_table table colgroup col:not(:nth-child(1)){width:calc(100% - 80px) !important;}
+}
+
+@media all and (max-width:520px){
+    /* 취업안내 */
+    .employmentInfo .employment_title br{display:none;}
+    .employmentInfo .employment_title h2{width:270px;line-height:54px;margin:0 auto;}
+    .employmentInfo .employment_row .img_bx{height:200px;}
+}
+
+@media all and (max-width:500px){
+    /* 전년도입시결과 */
+    .typeIpsi .contTable.ipsi_table4 table,
+    .typeIpsi .contTable.ipsi_table7 table{width:466px;}
+
+    /* 찾아오시는 길 */
+    .locationMap .map_bx .map_inner .kakaomap .wrap_map{height:300px !important;}
+
+    /* 학과안내 */
+    .deptRow .deptItems .img_bx{height:240px;}
+}
+
+@media all and (max-width:420px){
+    /* 모집안내 */
+    .applyTable .a_name .inputBase,
+    .applyTable .a_tel .selectBase .toggleBtn{width:100%;}
+    .applyTable .a_tel .inputBase,.applyTable .a_tel .selectBase{width:calc(35% - 20px);}
+    .board_admission .board_table .tbodyDept,
+    .board_admission .board_table .tbodyApply,
+    .board_admission .board_table .tbodyDate,
+    .board_admission .board_table .tbodyState{width:100%;}
+
+    /* 주소검색 */
+    .addressSech .topA .inputBase{width:calc(100% - 94px);}
+    .addressSech .topA .baseBtn{width:87px;margin-left:7px;}
+
+    /* 첨부파일 */
+    .formInput.file{position:relative;}
+    .formInput.file .fileAdd,
+    .formInput.file .fileAdd .inputBase{width:100%;}
+    .formInput.file .fileAdd .baseBtn{width:calc(100% - 87px);margin:7px 0 0 0;}    
+    .formInput.file .fileCont{position:absolute;right:0;bottom:0;}
+    .formInput.file .fileCont .controlBtn:first-child{margin-left:0;}
+
+    /* 게시판 상세 */
+    .typeIpsi .BBSlist_v dd{padding:25px 0;}
+
+    /* 편입학안내 */
+    .pyeonib_qualification colgroup col:nth-child(1){width:65px;}
+    .pyeonib_qualification table thead th:first-child,
+    .pyeonib_qualification table tbody td:first-child{padding:15px 13px 14px;}
+
+
+    /* 교수소개 */
+    .professorList{width:100%;margin-left:0px;}
+    .professorList ul .item{width:100%;margin:0;}
+    .professorList ul .item:nth-of-type(n+2){margin-top:40px;}
+
+    #sitemap_gnb.typeEng_siteMap>li>.menuM>li>.menuS>li{width:100% !important;}
+    
+    /* 세계로장학금 */
+    .scholarship_table table colgroup col:nth-child(1){width:70px !important;}
+    .scholarship_table table colgroup col:not(:nth-child(1)){width:calc(100% - 70px) !important;}
+    .typeIpsi .lineTop_tbArea.scholarship_table br{display:block;}
+
+    /* 개인정보처리방침 */
+    .typeIpsi .utilPrivacy #privacy10 .contTable.privacy_team table{width:420px;}
+
+    /* 입학자료 신청 */
+    .board_admission .admis_i.a_tel .selectBase, .board_admission .admis_i.a_tel .inputBase{width:calc(35% - 20px);}
+    
+    /* 공유하기 */
+    .typeIpsi .shareArea .shareBox{width:100%;}
+    .typeIpsi .shareArea .shareBox ul{margin-left:0;width:100%;}
+    .typeIpsi .shareArea .shareBox ul li{width:50%;padding:0 0 0 10px;}
+    .typeIpsi .shareArea .shareBox ul li:nth-child(odd){padding:0;}
+}
+
+@media all and (max-width:389px){
+    /* 모집안내 */
+    .applyTable .telNumber .bar{padding:0 5px;}
+    .applyTable .a_tel .selectBase>.toggleBtn>.base{padding:12px 30px 12px 16px;}
+    .applyTable .a_tel .inputBase, .applyTable .a_tel .selectBase{width:calc(34.9% - 15px);}
+
+    /* 전공심화과정안내 */
+    .jongong_taking .taking_inner> div .plus{margin:0 10px;width:25px;height:25px;}
+    .jongong_taking .taking_inner> div:not(.jongong4):before{width:165px;}
+    
+    /* 학과소개 */
+    .deptMedia .deptTxt h2{font-size:36px;}
+
+    /* 입학자료 신청 */
+    .board_admission .admis_i.a_tel .selectBase, .board_admission .admis_i.a_tel .inputBase{width:calc(34.9% - 15px);}
+}

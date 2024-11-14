@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="95" height="95" viewBox="0 0 95 95">
+  <g id="그룹_8212" data-name="그룹 8212" transform="translate(1368 -3112)">
+    <g id="_03_icon" data-name="03_icon" transform="translate(-1371.69 3135.018)">
+      <path id="사각형_691" data-name="사각형 691" d="M6,2A4,4,0,0,0,2,6V78a4,4,0,0,0,4,4H68a4,4,0,0,0,4-4V6a4,4,0,0,0-4-4H6M6,0H68a6,6,0,0,1,6,6V78a6,6,0,0,1-6,6H6a6,6,0,0,1-6-6V6A6,6,0,0,1,6,0Z" transform="translate(8.69 -22.018)" fill="#343440"/>
+      <g id="그룹_8210" data-name="그룹 8210" transform="translate(-7 1)">
+        <circle id="타원_157" data-name="타원 157" cx="18" cy="18" r="18" transform="translate(65.69 33.982)" fill="#2dab40"/>
+        <path id="합치기_58" data-name="합치기 58" d="M-6776.31,7280.983h-6a1,1,0,0,1-1-1,1,1,0,0,1,1-1h5v-5a1,1,0,0,1,1-1,1,1,0,0,1,1,1v6a1,1,0,0,1-1,1Z" transform="translate(-9855.609 401.29) rotate(-135)" fill="#fff"/>
+        <rect id="사각형_2232" data-name="사각형 2232" width="2" height="14" rx="1" transform="translate(82.69 46.239)" fill="#fff"/>
+      </g>
+      <g id="그룹_8209" data-name="그룹 8209" transform="translate(4 -5)">
+        <rect id="사각형_2223" data-name="사각형 2223" width="20" height="2" rx="1" transform="translate(19.69 38.982)" fill="#343440"/>
+        <rect id="사각형_2222" data-name="사각형 2222" width="46" height="2" rx="1" transform="translate(18.69 26.982)" fill="#343440"/>
+        <rect id="사각형_2233" data-name="사각형 2233" width="46" height="2" rx="1" transform="translate(18.69 14.982)" fill="#343440"/>
+        <rect id="사각형_2221" data-name="사각형 2221" width="46" height="2" rx="1" transform="translate(18.69 2.982)" fill="#343440"/>
+      </g>
+    </g>
+    <rect id="사각형_2235" data-name="사각형 2235" width="95" height="95" transform="translate(-1368 3112)" fill="none"/>
+  </g>
+</svg>

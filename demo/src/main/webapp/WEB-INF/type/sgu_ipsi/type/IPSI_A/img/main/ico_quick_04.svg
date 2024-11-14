@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="빼기_7" data-name="빼기 7" d="M42,42H0V0H27V20H42V42Z" transform="translate(5.69 0.104)"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_8156" data-name="그룹 8156" transform="translate(-910 -320)">
+    <circle id="타원_145" data-name="타원 145" cx="50" cy="50" r="50" transform="translate(910 320)" fill="#f1f2f7"/>
+    <g id="_03_icon" data-name="03_icon" transform="translate(931.31 347.895)">
+      <g id="마스크_그룹_67" data-name="마스크 그룹 67" transform="translate(1 1)" clip-path="url(#clip-path)">
+        <path id="사각형_691" data-name="사각형 691" d="M6,2A4,4,0,0,0,2,6V36a4,4,0,0,0,4,4H36a4,4,0,0,0,4-4V6a4,4,0,0,0-4-4H6M6,0H36a6,6,0,0,1,6,6V36a6,6,0,0,1-6,6H6a6,6,0,0,1-6-6V6A6,6,0,0,1,6,0Z" transform="translate(5.69 0.105)" fill="#343440"/>
+      </g>
+      <rect id="사각형_2182" data-name="사각형 2182" width="24" height="2" rx="1" transform="translate(15.69 33.105)" fill="#343440"/>
+      <path id="합치기_46" data-name="합치기 46" d="M7075.416,3355.845l-3.058-4.89a.933.933,0,0,1-.011-.956h-.151v-18.4h8V3350h-.151a.939.939,0,0,1-.01.956l-3.056,4.89a.92.92,0,0,1-1.562,0Zm-3.22-27.206v-2.4a4,4,0,1,1,8,0v2.4Z" transform="translate(-2606.361 -7349.37) rotate(45)" fill="#41c956"/>
+    </g>
+  </g>
+</svg>

@@ -1,15 +1,19 @@
 package com.example.demo.web;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -22,7 +26,10 @@ import com.example.demo.security.MyUserDetails;
 import com.example.demo.vo.USER_VO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -66,6 +73,7 @@ public class ApiController {
         String role = member.getTOP_AUTH_YN().toString().equals("Y") ? "ROLE_ADMIN" : "ROLE_USER";
         
         return jwtTokenProvider.createToken(username, role);
+        
     }
     
     @PostMapping("/test")
@@ -85,5 +93,26 @@ public class ApiController {
         Map<String, String> result = new HashMap<>();
         result.put("result","admin ok");
         return result;
+    }
+    
+    @Value("${jwt.secret}")
+    String key;
+    
+    private long accessTokenValidTime = 60 * 60 * 1000L;
+    
+    @PostMapping("/guest-token")
+    public ResponseEntity<String> getToken() {
+        Map<String, Object> claims = new HashMap<>();
+        
+        claims.put("userId", "guest"); //익명 사용자 ID
+        claims.put("roles", "ROLE_GUEST");
+        
+        String jwt = Jwts.builder()
+			.setClaims(claims)
+			.setExpiration(new Date(System.currentTimeMillis() + accessTokenValidTime))
+			.signWith(SignatureAlgorithm.HS256, key)
+			.compact();
+        
+        return ResponseEntity.ok(jwt);
     }
 }
